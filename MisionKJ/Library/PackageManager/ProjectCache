@@ -5,27 +5,27 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637920831211340569
-    m_Hash: 4232660727
+      ticks: 637794036824243890
+    m_Hash: 3127999328
   m_LockFileStatus:
     m_FilePath: D:/Unity/GitHub/MisionKJ/MisionKJ/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637920831330848150
-    m_Hash: 398154054
+      ticks: 637794036824313705
+    m_Hash: 12786434
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.collab-proxy@1.15.7
+    - packageId: com.unity.collab-proxy@1.7.1
       testable: 0
       isDirectDependency: 1
-      version: 1.15.7
+      version: 1.7.1
       source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.collab-proxy@1.15.7
+      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.collab-proxy@1.7.1
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Version Control
@@ -127,15 +127,9 @@ m_PackageAssets:
       dependencies:
       - name: com.unity.nuget.newtonsoft-json
         version: 2.0.0
-      - name: com.unity.services.core
-        version: 1.0.1
       resolvedDependencies:
       - name: com.unity.nuget.newtonsoft-json
         version: 2.0.0
-      - name: com.unity.services.core
-        version: 1.0.1
-      - name: com.unity.modules.unitywebrequest
-        version: 1.0.0
       keywords:
       - backup
       - cloud
@@ -162,20 +156,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637744672890000000
+      datePublishedTicks: 637616921650000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-        revision: d208594e5483cdf10d303b6ee17df4d6bf58d3de
+        revision: 30ef59f552633de9ff0401db4e73ac89982d4ac0
         path: 
-    - packageId: com.unity.ide.rider@2.0.7
+    - packageId: com.unity.ide.rider@3.0.7
       testable: 0
       isDirectDependency: 1
-      version: 2.0.7
+      version: 3.0.7
       source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.ide.rider@3.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -257,17 +251,11 @@ m_PackageAssets:
         - 3.0.15
         verified: 2.0.7
       dependencies:
-      - name: com.unity.test-framework
-        version: 1.1.1
-      resolvedDependencies:
-      - name: com.unity.test-framework
-        version: 1.1.29
       - name: com.unity.ext.nunit
         version: 1.0.6
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      - name: com.unity.modules.jsonserialize
-        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ext.nunit
+        version: 1.0.6
       keywords: []
       registry:
         id: main
@@ -281,20 +269,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637334461080000000
+      datePublishedTicks: 637572251600000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-        revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
+        revision: 3007c42a679bbe2c082c276e8d79279110964553
         path: 
-    - packageId: com.unity.ide.visualstudio@2.0.14
+    - packageId: com.unity.ide.visualstudio@2.0.11
       testable: 0
       isDirectDependency: 1
-      version: 2.0.14
+      version: 2.0.11
       source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.ide.visualstudio@2.0.14
+      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -356,7 +344,7 @@ m_PackageAssets:
         version: 1.1.9
       resolvedDependencies:
       - name: com.unity.test-framework
-        version: 1.1.29
+        version: 1.1.27
       - name: com.unity.ext.nunit
         version: 1.0.6
       - name: com.unity.modules.imgui
@@ -376,20 +364,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637782923640000000
+      datePublishedTicks: 637613656180000000
       documentationUrl: 
-      hasRepository: 0
+      hasRepository: 1
       repository:
-        type: 
-        url: 
-        revision: 
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
+        revision: 680e06d94ffca728223ae2cb14bb919cd354e2c1
         path: 
-    - packageId: com.unity.ide.vscode@1.2.4
+    - packageId: com.unity.ide.vscode@1.2.3
       testable: 0
       isDirectDependency: 1
-      version: 1.2.4
+      version: 1.2.3
       source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.ide.vscode@1.2.4
+      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -449,20 +437,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637660806170000000
+      datePublishedTicks: 637394922300000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: git+https://github.com/Unity-Technologies/com.unity.ide.vscode.git
-        revision: 1f4f605d5c988cb610c372b5c5216c46cc8f5d30
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
+        revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
-    - packageId: com.unity.test-framework@1.1.29
+    - packageId: com.unity.test-framework@1.1.27
       testable: 0
       isDirectDependency: 1
-      version: 1.1.29
+      version: 1.1.27
       source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.test-framework@1.1.29
+      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.test-framework@1.1.27
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -550,186 +538,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637647922650000000
+      datePublishedTicks: 637594751620000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
-        revision: dac53542acdab7a12e9ebf111ac588d0e53cf483
+        revision: c2f2cc9b7ea61d42964257363595dff5e8c47c42
         path: 
-    - packageId: com.unity.textmeshpro@3.0.6
+    - packageId: com.unity.timeline@1.5.6
       testable: 0
       isDirectDependency: 1
-      version: 3.0.6
+      version: 1.5.6
       source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.textmeshpro@3.0.6
-      assetPath: Packages/com.unity.textmeshpro
-      name: com.unity.textmeshpro
-      displayName: TextMeshPro
-      author:
-        name: 
-        email: 
-        url: 
-      category: Text Rendering
-      type: 
-      description: 'TextMeshPro is the ultimate text solution for Unity. It''s the
-        perfect replacement for Unity''s UI Text and the legacy Text Mesh.
-
-
-        Powerful
-        and easy to use, TextMeshPro (also known as TMP) uses Advanced Text Rendering
-        techniques along with a set of custom shaders; delivering substantial visual
-        quality improvements while giving users incredible flexibility when it comes
-        to text styling and texturing.
-
-
-        TextMeshPro provides Improved Control
-        over text formatting and layout with features like character, word, line
-        and paragraph spacing, kerning, justified text, Links, over 30 Rich Text
-        Tags available, support for Multi Font & Sprites, Custom Styles and more.
-
-
-        Great
-        performance. Since the geometry created by TextMeshPro uses two triangles
-        per character just like Unity''s text components, this improved visual quality
-        and flexibility comes at no additional performance cost.'
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 0.1.2
-        - 1.0.21
-        - 1.0.23
-        - 1.0.25
-        - 1.0.26
-        - 1.1.0
-        - 1.2.0
-        - 1.2.1
-        - 1.2.2
-        - 1.2.3
-        - 1.2.4
-        - 1.3.0-preview
-        - 1.3.0
-        - 1.4.0-preview.1b
-        - 1.4.0-preview.2a
-        - 1.4.0-preview.3a
-        - 1.4.0
-        - 1.4.1-preview.1
-        - 1.4.1
-        - 1.5.0-preview.1
-        - 1.5.0-preview.2
-        - 1.5.0-preview.3
-        - 1.5.0-preview.4
-        - 1.5.0-preview.5
-        - 1.5.0-preview.6
-        - 1.5.0-preview.7
-        - 1.5.0-preview.8
-        - 1.5.0-preview.10
-        - 1.5.0-preview.11
-        - 1.5.0-preview.12
-        - 1.5.0-preview.13
-        - 1.5.0-preview.14
-        - 1.5.0
-        - 1.5.1
-        - 1.5.3
-        - 1.5.4
-        - 1.5.5
-        - 1.5.6
-        - 1.6.0-preview.1
-        - 2.0.0
-        - 2.0.1-preview.1
-        - 2.0.1
-        - 2.1.0-preview.1
-        - 2.1.0-preview.2
-        - 2.1.0-preview.3
-        - 2.1.0-preview.4
-        - 2.1.0-preview.5
-        - 2.1.0-preview.7
-        - 2.1.0-preview.8
-        - 2.1.0-preview.10
-        - 2.1.0-preview.11
-        - 2.1.0-preview.12
-        - 2.1.0-preview.13
-        - 2.1.0-preview.14
-        - 2.1.0
-        - 2.1.1
-        - 2.1.3
-        - 2.1.4
-        - 2.1.5
-        - 2.1.6
-        - 2.2.0-preview.1
-        - 2.2.0-preview.2
-        - 2.2.0-preview.3
-        - 3.0.0-preview.1
-        - 3.0.0-preview.3
-        - 3.0.0-preview.4
-        - 3.0.0-preview.5
-        - 3.0.0-preview.7
-        - 3.0.0-preview.8
-        - 3.0.0-preview.10
-        - 3.0.0-preview.11
-        - 3.0.0-preview.12
-        - 3.0.0-preview.13
-        - 3.0.0-preview.14
-        - 3.0.0
-        - 3.0.1
-        - 3.0.3
-        - 3.0.4
-        - 3.0.5
-        - 3.0.6
-        - 3.2.0-pre.1
-        - 3.2.0-pre.2
-        - 3.2.0-pre.3
-        - 4.0.0-pre.1
-        compatible:
-        - 3.0.6
-        - 3.2.0-pre.1
-        - 3.2.0-pre.2
-        - 3.2.0-pre.3
-        verified: 3.0.6
-      dependencies:
-      - name: com.unity.ugui
-        version: 1.0.0
-      resolvedDependencies:
-      - name: com.unity.ugui
-        version: 1.0.0
-      - name: com.unity.modules.ui
-        version: 1.0.0
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      keywords:
-      - TextMeshPro
-      - TextMesh Pro
-      - TMP
-      - Text
-      - SDF
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637547111200000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-        revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
-        path: 
-    - packageId: com.unity.timeline@1.4.8
-      testable: 0
-      isDirectDependency: 1
-      version: 1.4.8
-      source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.timeline@1.4.8
+      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.timeline@1.5.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -882,13 +704,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637557616100000000
+      datePublishedTicks: 637613662510000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-        revision: 527e4364e28028f20f04fc51db671eb4bb910a26
+        revision: bba45362fa74fde39bfa14d05688da527254b39f
         path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0
@@ -952,6 +774,106 @@ m_PackageAssets:
         type: 
         url: 
         revision: 
+        path: 
+    - packageId: com.unity.visualscripting@1.6.1
+      testable: 0
+      isDirectDependency: 1
+      version: 1.6.1
+      source: 1
+      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1
+      assetPath: Packages/com.unity.visualscripting
+      name: com.unity.visualscripting
+      displayName: Visual Scripting
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: "Visual Scripting, previously known as BOLT, is an alternative
+        workflow to design behaviours. Instead of the classic method of writing a
+        C# script, visual scripting offers a way to design behaviours intuitively
+        without code, by connecting events, actions, and data together in a graph.
+        \n\nBoth programmers and non-programmers can use node-based graphs to design
+        final logic or to quickly create prototypes. This package also features an
+        API that programmers can use for more advanced tasks, or to create custom
+        nodes that can be used by other team members."
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.5.0
+        - 1.5.1-pre.3
+        - 1.5.1-pre.5
+        - 1.5.1
+        - 1.5.2
+        - 1.6.0-pre.3
+        - 1.6.0
+        - 1.6.1
+        - 1.7.1
+        - 1.7.2
+        - 1.7.3
+        - 1.7.5
+        - 1.7.6
+        - 1.7.7
+        - 1.7.8
+        - 1.8.0-pre.1
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ai
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.physics2d
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.ai
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.physics2d
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637547228050000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
+        revision: d2dc8205ed231b4fc18289dddb14c0a92c76154f
         path: 
     - packageId: com.unity.modules.ai@1.0.0
       testable: 0
@@ -2839,87 +2761,6 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
         revision: d2fd6ed876261bbd82f59199ad711e7667bf633a
-        path: 
-    - packageId: com.unity.services.core@1.0.1
-      testable: 0
-      isDirectDependency: 0
-      version: 1.0.1
-      source: 1
-      resolvedPath: D:\Unity\GitHub\MisionKJ\MisionKJ\Library\PackageCache\com.unity.services.core@1.0.1
-      assetPath: Packages/com.unity.services.core
-      name: com.unity.services.core
-      displayName: Services Core
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: 'This package defines common components used by multiple Game
-        Service packages.
-
-        These are standardized and aim to unify the overall
-        experience of working with Game Services packages.'
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 1.0.1
-        - 1.1.0-pre.7
-        - 1.1.0-pre.8
-        - 1.1.0-pre.9
-        - 1.1.0-pre.10
-        - 1.1.0-pre.11
-        - 1.1.0-pre.41
-        - 1.1.0-pre.69
-        - 1.2.0
-        - 1.3.1
-        - 1.3.2
-        - 1.4.0
-        - 1.4.1
-        - 1.4.2
-        compatible:
-        - 1.0.1
-        - 1.1.0-pre.7
-        - 1.1.0-pre.8
-        - 1.1.0-pre.9
-        - 1.1.0-pre.10
-        - 1.1.0-pre.11
-        - 1.1.0-pre.41
-        - 1.1.0-pre.69
-        - 1.2.0
-        - 1.3.1
-        - 1.3.2
-        - 1.4.0
-        - 1.4.1
-        - 1.4.2
-        verified: 1.0.1
-      dependencies:
-      - name: com.unity.modules.unitywebrequest
-        version: 1.0.0
-      resolvedDependencies:
-      - name: com.unity.modules.unitywebrequest
-        version: 1.0.0
-      keywords: []
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637604883250000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-        revision: 4cd880d4fd5c60597629249bf4f324e4c8d7aa2e
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
