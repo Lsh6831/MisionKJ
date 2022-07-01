@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             movement = GetComponent<MovementChacterController>();
             status = GetComponent<Status>();
             audioSource = GetComponent<AudioSource>();
-           
+           weapon = GetComponentInChildren<WeaponBase>();
         }
 
         private void Update()
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
             {
                 movement.MoveSpeed = 0;
 			    weapon.Animator.MoveSpeed = 0;
-                // 멈췄을 때 산운드가 재생주이면 정지
+                // 멈췄을 때 산운드가 재생이면 정지
                 if(audioSource.isPlaying==true)
                 {
                     audioSource.Stop();
