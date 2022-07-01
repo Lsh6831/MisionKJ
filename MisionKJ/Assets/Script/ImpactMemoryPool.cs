@@ -1,41 +1,78 @@
 using UnityEngine;
-
-public enum ImpactType { Normal = 0, Obstacle }
+public enum ImpactType { Normal = 0, Obstacle, Enemy, InteractionObject, }
 
 public class ImpactMemoryPool : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] impactPrefab; // ÇÇ°Ý ÀÌÆåÆ®
-    private MemoryPool[] memoryPool;  // ÇÇ°Ý ÀÌÆåÆ® ¸Þ¸ð¸®Ç®
+    private GameObject[] impactPrefab;      // ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
+    private MemoryPool[] memoryPool;            // ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Þ¸ï¿½Ç®
 
     private void Awake()
     {
-        // ÇÇ°Ý ÀÌÆåÆ®°¡ ¿©·¯ Á¾·ùÀÌ¸é Á¾·ùº°·Î memoryPool »ý¼º
+        // ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ memoryPool ï¿½ï¿½ï¿½ï¿½
         memoryPool = new MemoryPool[impactPrefab.Length];
-        for(int i =0;i< impactPrefab.Length; ++i)
+        for (int i = 0; i < impactPrefab.Length; ++i)
         {
             memoryPool[i] = new MemoryPool(impactPrefab[i]);
         }
     }
+
     public void SpawnImpact(RaycastHit hit)
     {
-        // ºÎµñÈù ¿ÀºêÁ§Æ®À¸ Tag Á¤º¸¿¡ µû¶ó ´Ù¸£°Ô Ã³¸®
-        if( hit.transform.CompareTag("ImpactNormal"))
+        // ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Tag ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
+        if (hit.transform.CompareTag("ImpactNormal"))
         {
             OnSpawnImpact(ImpactType.Normal, hit.point, Quaternion.LookRotation(hit.normal));
         }
-        if (hit.transform.CompareTag("ImpactObstacle"))
+        else if (hit.transform.CompareTag("ImpactObstacle"))
         {
             OnSpawnImpact(ImpactType.Obstacle, hit.point, Quaternion.LookRotation(hit.normal));
         }
+        else if (hit.transform.CompareTag("ImpactEnemy"))
+        {
+            OnSpawnImpact(ImpactType.Enemy, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+        else if (hit.transform.CompareTag("InteractionObject"))
+        {
+            Color color = hit.transform.GetComponentInChildren<MeshRenderer>().material.color;
+            OnSpawnImpact(ImpactType.InteractionObject, hit.point, Quaternion.LookRotation(hit.normal), color);
+        }
     }
 
-    public void OnSpawnImpact(ImpactType type, Vector3 position, Quaternion rotaion)
+    public void SpawnImpact(Collider other, Transform knifeTransform)
+    {
+        // ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Tag ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
+        if (other.CompareTag("ImpactNormal"))
+        {
+            OnSpawnImpact(ImpactType.Normal, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation));
+        }
+        else if (other.CompareTag("ImpactObstacle"))
+        {
+            OnSpawnImpact(ImpactType.Obstacle, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation));
+        }
+        else if (other.CompareTag("ImpactEnemy"))
+        {
+            OnSpawnImpact(ImpactType.Enemy, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation));
+        }
+        else if (other.CompareTag("InteractionObject"))
+        {
+            Color color = other.transform.GetComponentInChildren<MeshRenderer>().material.color;
+            OnSpawnImpact(ImpactType.InteractionObject, knifeTransform.position, Quaternion.Inverse(knifeTransform.rotation), color);
+        }
+    }
+
+    public void OnSpawnImpact(ImpactType type, Vector3 position, Quaternion rotation, Color color = new Color())
     {
         GameObject item = memoryPool[(int)type].ActivatePoolItem();
         item.transform.position = position;
-        item.transform.rotation = rotaion;
-        item.GetComponent<Impact>().SetUP(memoryPool[(int)type]);
-    }
+        item.transform.rotation = rotation;
+        item.GetComponent<Impact>().Setup(memoryPool[(int)type]);
 
+        if (type == ImpactType.InteractionObject)
+        {
+            ParticleSystem.MainModule main = item.GetComponent<ParticleSystem>().main;
+            main.startColor = color;
+        }
+    }
 }
+

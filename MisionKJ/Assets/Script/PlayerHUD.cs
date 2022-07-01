@@ -6,58 +6,119 @@ using TMPro;
 
 public class PlayerHUD : MonoBehaviour
 {
+    private WeaponBase weapon; // í˜„ì¬ ì •ë³´ê°€ ì¶œë ¥ë˜ëŠ” ë¬´ê¸°
     [Header("Components")]
     [SerializeField]
-    private WeaponAssultRifle weapon; // ÇöÀç Á¤º¸°¡ Ãâ·ÂµÇ´À ¹«±â
+    private Status status; // í”Œë ˆì´ì–´ì˜ ìƒíƒœ (ì´ë™ì†ë„, ì²´ë ¥)
 
     [Header("Weapon Base")]
     [SerializeField]
-    private TextMeshProUGUI textWeaponName; // ¹«±â ÀÌ¸§
+    private TextMeshProUGUI textWeaponName; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
     [SerializeField]
-    private Image imageWeaponIcon; // ¹«±â ¾ÆÀÌÄÜ
+    private Image imageWeaponIcon; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     [SerializeField]
+    private Sprite[] spriteWeaponIcons; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½ ï¿½ï¿½ï¿½Ç´ï¿½ sprite ï¿½è¿­
     [SerializeField]
-    private Sprite[] spriteWeaponIcon; // ¹«±â ¾ÆÀÌÄÜ¿¡ »ç¿ëµÇ´Â sprite ¹è¿­
+    private Vector2[] sizeWeaponIcons; // ë¬´ê¸° ì•„ì´ì½˜ì˜ Ui í¬ê¸° ë°°ì—´
 
     [Header("Ammo")]
     [SerializeField]
-    private TextMeshProUGUI textAmmo; //ÇöÀç / ÃÖ´ë Åº ¼ö Ãâ·Â Text
+    private TextMeshProUGUI textAmmo; //ï¿½ï¿½ï¿½ï¿½ / ï¿½Ö´ï¿½ Åº ï¿½ï¿½ ï¿½ï¿½ï¿½ Text
 
     [Header("Magazine")]
     [SerializeField]
-    private GameObject magazineUIPrefab; //ÅºÃ¢ UI ÇÁ¸®ÆÕ
+    private GameObject magazineUIPrefab; //ÅºÃ¢ UI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    private Transform magazineParent; // ÅºÃ¢ UI°¡ ¹èÄ¡µÇ´Â Panael
+    private Transform magazineParent; // ÅºÃ¢ UIï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ç´ï¿½ Panael
+    [SerializeField]
+    private int maxMagazineCount; // ì²˜ìŒ ìƒì„±í•˜ëŠ” ìµœëŒ€ íƒ„ì°½ ìˆ˜
 
-    private List<GameObject> magazineList; // ÅºÃ¢ UI ¸®½ºÆ®
+    private List<GameObject> magazineList; // ÅºÃ¢ UI ï¿½ï¿½ï¿½ï¿½Æ®
+
+    [Header("HP & BloodScreen UI")]
+    [SerializeField]
+    private TextMeshProUGUI textHP; // í”Œë ˆì´ì–´ì˜ ì²´ë ¥ì„ ì¶œë ¥í•˜ëŠ” Text
+    [SerializeField]
+    private Image imageBloodScreen; // í”Œë ˆì´ì–´ê°€ ê³µê²©ë°›ì•˜ì„ ë–„ í™”ë©´ì— í‘œì‹œë˜ëŠ” ì´ë¯¸ì§€
+    [SerializeField]
+    private AnimationCurve curveBloodScreen;
+   
 
 
     private void Awake()
     {
-        SetupWeapon();
+        
+        // ï¿½Ş¼Òµå°¡ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ ï¿½Ìºï¿½Æ® Å¬ï¿½ï¿½ï¿½ï¿½(weapon.xx)ï¿½ï¿½
+        // Invoke() ï¿½Ş¼Òµå°¡ È£ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ïµï¿½ ï¿½Ş¼Òµï¿½(ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È´ï¿½
+        
+        status.onHPEvent.AddListener(UpdateHPHUD);
+    } 
+
+    public void SetupAllWeapons(WeaponBase[] weapons)
+    {
         SetupMagazine();
 
-        // ¸Ş¼Òµå°¡ µî·ÏµÇ¾î ÀÖ´Â ÀÌº¥Æ® Å¬·¡½º(weapon.xx)ÀÇ
-        // Invoke() ¸Ş¼Òµå°¡ È£ÃâµÉ ¶§ µî·ÏµÈ ¸Ş¼Òµå(¸Å°³º¯¼ö) °¡ ½ÇÇàµÈ´Ù
-        weapon.onAmmoEvent.AddListener(UpdateAmmoHUD);
-        weapon.onMagazineEvent.AddListener(UpdateMagazineHUD);
-    } 
-    private void SetupWeapon()
+        //ì‚¬ìš© ê°€ëŠ¥í•œ ëª¨ë“  ë¬´ê¸° ì´ë²¤íŠ¸ì˜ ë“±ë¡
+        for (int i = 0; i < weapons.Length; ++i)
+        {
+            weapons[i].onAmmoEvent.AddListener(UpdateAmmoHUD);
+            weapons[i].onMagazineEvent.AddListener(UpdateMagazineHUD);
+        }
+    }
+       public void SwitchingWeapon(WeaponBase newWeapon)
     {
-        //textWeaponName.text = weapon.WeaponName.Tosrting();
-        //imageWeaponIcon.sprite = spriteWeaponIcon[(int)weapon.WeaponName];
+        weapon = newWeapon;
+
+        SetupWeapon();
     }
 
-    private void UpdateAmmoHUD(int currentAmmo,int maxAmmo)
+    private void SetupWeapon()
+    {
+        textWeaponName.text = weapon.WeaponName.ToString();
+        imageWeaponIcon.sprite = spriteWeaponIcons[(int)weapon.WeaponName];
+        imageWeaponIcon.rectTransform.sizeDelta = sizeWeaponIcons[(int)weapon.WeaponName];
+    }
+
+    private void UpdateAmmoHUD(int currentAmmo, int maxAmmo)
     {
         textAmmo.text = $"<size=40>{currentAmmo}/</size>{maxAmmo}";
     }
+    private void UpdateHPHUD(int previous,int current)
+    {
+       textHP.text = "HP " + current;
+
+        // ì²´ë ¥ì´ ì¦ê°€í–ˆì„ ë•ŒëŠ” í™”ë©´ì— ë¹¨ê°„ìƒ‰ ì´ë¯¸ì§€ë¥¼ ì¶œë ¥í•˜ì§€ ì•Šë„ë¡ return
+        if (previous <= current) return;
+
+        if (previous - current > 0)
+        {
+            StopCoroutine("OnBloodScreen");
+            StartCoroutine("OnBloodScreen");
+        }
+    }
+
+     private IEnumerator OnBloodScreen()
+    {
+        float percent = 0;
+
+        while (percent < 1)
+        {
+            percent += Time.deltaTime;
+
+            Color color = imageBloodScreen.color;
+            color.a = Mathf.Lerp(1, 0, curveBloodScreen.Evaluate(percent));
+            imageBloodScreen.color = color;
+
+            yield return null;
+        }
+    }
 
     private void SetupMagazine()
-    {
-        // weapon¿¡ µî·ÏµÇ¾î ÀÖ´Â ÃÖ´ë ÅºÃ¢ °³¼ö¸¸Å­ Image IconÀ» »ı¼º
-        // magazineParent ¿ÀºêÁ§Æ®ÀÇ ÀÚ½ÄÀ¸·Î µî·Ï ÈÄ ¸ğµÎ ºñÈ°¼ºÈ­/¸®½ºÆ®¿¡ ÀúÀå
-        magazineList = new List<GameObject>();
-        for (int i=0;i<weapon.MaxMagazine;++i)
+    {      
+		// weaponï¿½ï¿½ ï¿½ï¿½ÏµÇ¾ï¿½ ï¿½Ö´ï¿½ ï¿½Ö´ï¿½ ÅºÃ¢ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å­ Image Iconï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		// magazineParent ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­/ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		magazineList = new List<GameObject>();
+        for (int i = 0; i < maxMagazineCount; ++i)
         {
             GameObject clone = Instantiate(magazineUIPrefab);
             clone.transform.SetParent(magazineParent);
@@ -65,22 +126,16 @@ public class PlayerHUD : MonoBehaviour
 
             magazineList.Add(clone);
         }
-
-        // weapon ¿¡ µî·ÏµÇ¾î ÀÖ´Â ÇöÀç ÅºÃ¢ °³¼ö¸¸Å­ ¿ÀºêÁ§Æ® È°¼ºÈ­
-        for(int i = 0; i<weapon.CurrentMagazine;++i)
-        {
-            magazineList[i].SetActive(true);
-        }
     }
 
     private void UpdateMagazineHUD(int currentMagazine)
     {
-        // ÀüºÎ ºñÈ°¼ºÈ­ÇÏ°í, currentmagazine °³¼ö¸¸Å­ È°¼ºÈ­
-        for(int i =0; i< magazineList.Count; ++i)
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ï¿½Ï°ï¿½, currentmagazine ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å­ È°ï¿½ï¿½È­
+        for (int i = 0; i < magazineList.Count; ++i)
         {
             magazineList[i].SetActive(false);
         }
-        for(int i = 0; i< currentMagazine;++i)
+        for (int i = 0; i < currentMagazine; ++i)
         {
             magazineList[i].SetActive(true);
         }

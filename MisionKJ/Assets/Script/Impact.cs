@@ -12,14 +12,14 @@ public class Impact : MonoBehaviour
         particle = GetComponent<ParticleSystem>();
     }
 
-    public void SetUP(MemoryPool pool)
+    public void Setup(MemoryPool pool)
     {
         memoryPool = pool;
     }
 
     private void Update()
     {
-        // ÆÄÆ¼Å¬ÀÌ Àç»ýÁßÀÌ ¾Æ´Ï¸é »èÁ¦
+        // ï¿½ï¿½Æ¼Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½
         if( particle.isPlaying==false)
         {
             memoryPool.DeactivateAllPoolItem(gameObject);

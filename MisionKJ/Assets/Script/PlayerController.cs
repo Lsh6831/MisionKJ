@@ -20,10 +20,9 @@ public class PlayerController : MonoBehaviour
 
     private RotateToMouse rotateToMouse; // 마우스 이동으로 카메라 회전
     private MovementChacterController movement; // 키보드 입력으로 플레이어 이동,점프
-    private Status status; // 이동속도 등의 플레이어 정보
-    private PlayerAnimatorController animator; // 애니메이션 재생 제어
+    private Status status; // 이동속도 등의 플레이어 정보   
     private AudioSource audioSource; // 사운드 재생 제어
-    private WeaponAssultRifle weapon; // 무기를 이용한 공격 제어
+    private WeaponBase weapon; // 모든 무기가 상속받는 기반 클래스
 
     private void Awake() 
         {
@@ -34,9 +33,8 @@ public class PlayerController : MonoBehaviour
             rotateToMouse =GetComponent<RotateToMouse>();
             movement = GetComponent<MovementChacterController>();
             status = GetComponent<Status>();
-            animator = GetComponent<PlayerAnimatorController>();
             audioSource = GetComponent<AudioSource>();
-            weapon = GetComponentInChildren<WeaponAssultRifle>();
+           
         }
 
         private void Update()
@@ -52,7 +50,7 @@ public class PlayerController : MonoBehaviour
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
 
-                rotateToMouse.UpdateRotate(mouseX,mouseY);
+            rotateToMouse.UpdateRotate(mouseX,mouseY);
         }
 
         private void UpdateMove()
@@ -70,7 +68,8 @@ public class PlayerController : MonoBehaviour
 
                 movement.MoveSpeed = isRun ==true ? status.RunSpeed : status.WalkSpeed;
                 //삼항 연산자 이동속도는 isRun이 트루이면 statun.RunSpeed로 펠스이면 statusWalkSpeed로;
-                animator.MoveSpeed = isRun == true ? 1:0.5f;
+                // animator.MoveSpeed = isRun == true ? 1:0.5f;
+                weapon.Animator.MoveSpeed = isRun ==true ? 1 : 0.5f;
                 // 애니메이션 트리 설정
                 audioSource.clip = isRun == true ? audioClipRun : audioClipWalk;
                 
@@ -86,8 +85,8 @@ public class PlayerController : MonoBehaviour
             // 제자리에 멈춰 있을 때
             else
             {
-                movement.MoveSpeed=0;
-                animator.MoveSpeed=0;
+                movement.MoveSpeed = 0;
+			    weapon.Animator.MoveSpeed = 0;
                 // 멈췄을 때 산운드가 재생주이면 정지
                 if(audioSource.isPlaying==true)
                 {
@@ -112,7 +111,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(Input.GetMouseButtonUp(0))
             {
-                weapon.StopWeaPonAction();
+                weapon.StopWeaponAction();
             }
         if (Input.GetMouseButtonDown(1))
         {
@@ -128,6 +127,19 @@ public class PlayerController : MonoBehaviour
              {
                  weapon.StartReload();
              }
+        }
+        public void TakeDamage(int damage)
+        {
+            bool isDie = status.DescreaseHP(damage);
+            
+            if(isDie == true)
+            {
+                Debug.Log("GameOver");
+            }
+        }
+        public void SwitchingWeapon(WeaponBase newWeapon)
+        {
+            weapon = newWeapon;
         }
     
 }

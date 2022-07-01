@@ -25,6 +25,10 @@ public class Status : MonoBehaviour
    public float WalkSpeed => walkSpeed;
    public float RunSpeed => runSpeed;
 
+   public int CurrentHP => currentHP;
+   public int MaxHP => maxHP;
+
+
     private void Awake()
     {
         currentHP = maxHP;
@@ -44,4 +48,11 @@ public class Status : MonoBehaviour
         }
         return false;
     }
+
+    public void IncreaseHP(int hp)
+    {
+        int previousHP =currentHP;
+        currentHP = currentHP + hp >maxHP ? maxHP : currentHP +hp;
+        onHPEvent.Invoke(previousHP,currentHP);
+    }   
 }

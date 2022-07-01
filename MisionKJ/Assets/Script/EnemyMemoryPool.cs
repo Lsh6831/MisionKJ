@@ -4,21 +4,21 @@ using UnityEngine;
 public class EnemyMemoryPool : MonoBehaviour
 {
     [SerializeField]
-    private Transform target; // ÀûÀÇ ¸ñÇ¥ (ÇÃ·¹ÀÌ¾î)
+    private Transform target; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç¥ (ï¿½Ã·ï¿½ï¿½Ì¾ï¿½)
     [SerializeField]
-    private GameObject enemySpawnPointPrefab; // ÀûÀÌ µîÀåÇÏ±â Àü ÀûÀÇ µîÀå À§Ä¡¸¦ ¾Ë·ÁÁÖ´Â ÇÁ¸®ÆÕ
+    private GameObject enemySpawnPointPrefab; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    private GameObject enemyPrefab; // »ý¼ºµÇ´Â Àû ÇÁ¸®ÆÕ
+    private GameObject enemyPrefab; // ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    private float enemySpawnTime = 1; // Àû »ý¼º ÁÖ±â
+    private float enemySpawnTime = 1; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½
     [SerializeField]
-    private float enemySpawnLatency = 1; // Å¸ÀÏ »ý¼º ÈÄ ÀûÀÌ µîÀåÇÏ±â ±îÁö ´ë±â ½Ã°£
+    private float enemySpawnLatency = 1; // Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
 
-    private MemoryPool spawnPointMemoryPool; // Àû µîÀå À§Ä¡¸¦ ¾Ë·ÁÁÖ´Â ¿ÀºêÁ§Æ® »ý¼º, È°¼º/ºñÈ°¼º °ü¸®
-    private MemoryPool enemyMemoryPool; // Àû »ý¼º, È°¼º/ºñÈ°¼º °ü¸®
+    private MemoryPool spawnPointMemoryPool; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½, È°ï¿½ï¿½/ï¿½ï¿½È°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    private MemoryPool enemyMemoryPool; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, È°ï¿½ï¿½/ï¿½ï¿½È°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     private int numberOfEnemiesSpawnedAtOnce = 1;
-    private Vector2Int mapSize = new Vector2Int(100, 100); // ¸Ê Å©±â
+    private Vector2Int mapSize = new Vector2Int(100, 100); // ï¿½ï¿½ Å©ï¿½ï¿½
 
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class EnemyMemoryPool : MonoBehaviour
 
         while ( true )
         {
-            // µ¹½Ã¿¡ numberOfEnemiesSpawnedAtOnce ¼ýÀÚ¸¸Å­ ÀûÀÌ »ý¼ºµÇµµ·Ï ¹Ýº¹¹® »ç¿ë
+            // ï¿½ï¿½ï¿½Ã¿ï¿½ numberOfEnemiesSpawnedAtOnce ï¿½ï¿½ï¿½Ú¸ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             for( int i = 0; i < numberOfEnemiesSpawnedAtOnce; ++i)
             {
                 GameObject item = spawnPointMemoryPool.ActivatePoolItem();
@@ -60,13 +60,17 @@ public class EnemyMemoryPool : MonoBehaviour
     {
         yield return new WaitForSeconds(enemySpawnLatency);
 
-        // Àû ¿ÀºêÁ§Æ®¸¦ »ý¼ºÇÏ°í, ÀûÀÇ À§Ä¡¸¦ pointÀÇ À§Ä¡·Î ¼³Á¤
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ pointï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         GameObject item = enemyMemoryPool.ActivatePoolItem();
         item.transform.position = point.transform.position;
 
-        item.GetComponent<EnemyFSM>().Setup(target);
+        item.GetComponent<EnemyFSM>().Setup(target,this);
 
-        // Å¸ÀÏ ¿ÀºêÁ§Æ®¸¦ ºñÈ°¼ºÈ­
+        // Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
         spawnPointMemoryPool.DeactivateAllPoolItem(point);
+    }
+    public void DeactivateEnemy(GameObject enemy)
+    {
+        enemyMemoryPool.DeactivateAllPoolItem(enemy);
     }
 }

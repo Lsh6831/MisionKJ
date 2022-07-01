@@ -15,7 +15,7 @@ public class EnemyFSM : MonoBehaviour
 
     [Header("Attack")]
     [SerializeField]
-    private GameObject projectileprefab; // 발사체 프리팹
+    private GameObject projectilePrefab; // 발사체 프리팹
     [SerializeField]
     private Transform projectileSpawnPoint; // 발사체 생성 위치
     [SerializeField]
@@ -29,13 +29,15 @@ public class EnemyFSM : MonoBehaviour
     private Status status; // 이동 속도 등의 정보
     private NavMeshAgent navMeshAgent; //이동 제어를 위한 NavmeshAgent
     private Transform target; //적의 공격 대상 (플레이어)
+    private EnemyMemoryPool enemyMemoryPool; // 적 메모리 풀( 적 오브젝트 비활성화에 사용)
 
     //private void Awake()
-    public void Setup(Transform target)
+    public void Setup(Transform target, EnemyMemoryPool enemyMemoryPool)
     {
         status = GetComponent<Status>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         this.target = target;
+        this.enemyMemoryPool = enemyMemoryPool;
 
         // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
         navMeshAgent.updateRotation = false;
@@ -177,31 +179,31 @@ public class EnemyFSM : MonoBehaviour
         }
     }
 
-    //private IEnumerator Attack()
-    //{
-    //    // 공격할 때는 이동을 멈추도록 설정
-    //    navMeshAgent.ResetPath();
+    private IEnumerator Attack()
+    {
+       // 공격할 때는 이동을 멈추도록 설정
+       navMeshAgent.ResetPath();
 
-    //    while ( true )
-    //    {
-    //        // 타겟 방향 주시
-    //        LookRotationToTarget();
+       while ( true )
+       {
+           // 타겟 방향 주시
+           LookRotationToTarget();
 
-    //        // 타겟과의 거리에 따라 행동 선택( 배회, 추격, 원거리 공격)
-    //        CalculateDistanceToTargetAndSelectstate();
+           // 타겟과의 거리에 따라 행동 선택( 배회, 추격, 원거리 공격)
+           CalculateDistanceToTargetAndSelectstate();
 
-    //        if(Time.time -lastAttackTime> attackRange)
-    //        {
-    //            // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
-    //            lastAttackTime = Time.time;
+           if( Time.time - lastAttackTime > attackRate)
+           {
+               // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
+               lastAttackTime = Time.time;
 
-    //            // 발사체 생성
-    //            GameObject clone = Instantiate(projectileprefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-    //            clone.GetComponent<EnemyProjectile>().Setup(target.position);
+               // 발사체 생성
+               GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+				clone.GetComponent<EnemyProjectile>().Setup(target.position);
 
-    //        }
-    //    }
-    //}
+           }
+       }
+    }
 
     private void LookRotationToTarget()
     {
@@ -257,5 +259,15 @@ public class EnemyFSM : MonoBehaviour
         //공격 범위
         Gizmos.color = new Color(0.39f, 0.04f, 0.04f);
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        bool isDie = status.DescreaseHP(damage);
+
+        if(isDie == true)
+        {
+            enemyMemoryPool.DeactivateEnemy(gameObject);
+        }
     }
 }
