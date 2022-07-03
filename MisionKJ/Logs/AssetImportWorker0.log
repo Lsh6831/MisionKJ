@@ -1,0 +1,21 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.28f1 (f5400f52e03f) revision 16072719'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'ko' Physical Memory: 16323 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\unity\2020.3.28f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/unity/Github/3T/MisionKJ/MisionKJ
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+2006
+Successfully changed project path to: D:/unity/Github/3T/MisionKJ/MisionKJ
+D:/unity/Github/3T/MisionKJ/MisionKJ
+Using Asset Import Pipeline V2.

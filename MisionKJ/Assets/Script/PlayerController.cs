@@ -34,10 +34,15 @@ public class PlayerController : MonoBehaviour
             movement = GetComponent<MovementChacterController>();
             status = GetComponent<Status>();
             audioSource = GetComponent<AudioSource>();
-           weapon = GetComponentInChildren<WeaponBase>();
-        }
+              weapon = GetComponentInChildren<WeaponAssultRifle>();
+    }
+    public void SwitchingWeapon(WeaponBase newWeapon)
+    {
+        weapon = newWeapon;
+    }
 
-        private void Update()
+
+    private void Update()
         {
             UpdateRotate();
             UpdateMove();
@@ -136,10 +141,6 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("GameOver");
             }
-        }
-        public void SwitchingWeapon(WeaponBase newWeapon)
-        {
-            weapon = newWeapon;
         }
     
 }
