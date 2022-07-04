@@ -1,4 +1,4 @@
-using System.Collections; //코르틴 사용을 위함 이름 공간 정의
+    using System.Collections; //코르틴 사용을 위함 이름 공간 정의
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,10 +37,10 @@ public class WeaponAssultRifle : WeaponBase
     private ImpactMemoryPool impactMemoryPool; // 공격 효과 생성 후 활성/비활성 관리
     private Camera mainCamera; //광선 발사
 
-    // 외부에서 필요한 정보를 열람하기 위한 정의한 Get Property's
-    public WeaponName WeaponName => weaponSetting.weaponName;
-    public int CurrentMagazine => weaponSetting.currentMagazine;
-    public int MaxMagazine => weaponSetting.maxMagazine;
+    // // 외부에서 필요한 정보를 열람하기 위한 정의한 Get Property's
+    // public WeaponName WeaponName => weaponSetting.weaponName;
+    // public int CurrentMagazine => weaponSetting.currentMagazine;
+    // public int MaxMagazine => weaponSetting.maxMagazine;
 
     private void Awake() 
     {
@@ -280,12 +280,5 @@ public class WeaponAssultRifle : WeaponBase
         isReload = false;
         isAttack = false;
         isModeChange = false;
-    }
-    
-    public void IncreaseMagazine(int magazine)
-    {
-        weaponSetting.currentMagazine = CurrentMagazine+ magazine> MaxMagazine ? MaxMagazine : CurrentMagazine + magazine;
-        onMagazineEvent.Invoke(CurrentMagazine);
-
-    }
+    } 
 }

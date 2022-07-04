@@ -36,8 +36,8 @@ public class EnemyProjectile : MonoBehaviour
     {
         if( other.CompareTag("Player"))
         {
-            // Debug.Log("Player Hit");
-            other.GetComponent<PlayerController>().TakeDamage(damage);
+            Debug.Log("Player Hit");
+            // other.GetComponent<PlayerController>().TakeDamage(damage);
 
             Destroy(gameObject);
         }

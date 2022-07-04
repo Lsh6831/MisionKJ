@@ -30,6 +30,7 @@ public class PlayerHUD : MonoBehaviour
     private GameObject magazineUIPrefab; //źâ UI ������
     [SerializeField]
     private Transform magazineParent; // źâ UI�� ��ġ�Ǵ� Panael
+    
     [SerializeField]
     private int maxMagazineCount; // 처음 생성하는 최대 탄창 수
 

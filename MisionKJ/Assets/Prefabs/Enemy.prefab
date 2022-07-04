@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRecognitionRange: 8
   pursuitLimitRange: 10
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 5817843913925955926, guid: 5db2bc0c5047a8a4ca6f4fc9e345b994, type: 3}
   projectileSpawnPoint: {fileID: 6951468233072279563}
   attackRange: 5
   attackRate: 1

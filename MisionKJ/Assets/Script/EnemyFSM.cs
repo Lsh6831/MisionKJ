@@ -202,7 +202,10 @@ public class EnemyFSM : MonoBehaviour
 				clone.GetComponent<EnemyProjectile>().Setup(target.position);
 
            }
+
+           yield return null;
        }
+
     }
 
     private void LookRotationToTarget()
