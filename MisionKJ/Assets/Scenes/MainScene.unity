@@ -949,31 +949,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2240226933523150294, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.82976305
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2240226933523150294, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.016695362
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2240226933523150294, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.51732326
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2240226933523150294, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.2087852
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2240226933523150294, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.107
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2240226933523150294, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 61.404
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2240226933523150294, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 19.843
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e172b32d48da49489c90148af2f5471, type: 3}
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 19522312}
   enemySpawnPointPrefab: {fileID: 1343713389826927842, guid: bcca8ea8b18e7614486b3257a14fe33b, type: 3}
-  enemyPrefab: {fileID: 713939721319973088, guid: 77fb60e1d42b8da4da53be0f4b86a4be, type: 3}
+  enemyPrefab: {fileID: 6302122895084781751, guid: 2b3a0ac25ef138a44836544d9db8d05b, type: 3}
   enemySpawnTime: 1
   enemySpawnLatency: 1
 --- !u!4 &1042057576

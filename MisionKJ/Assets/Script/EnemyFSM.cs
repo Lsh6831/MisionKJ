@@ -27,6 +27,7 @@ public class EnemyFSM : MonoBehaviour
     private float lastAttackTime = 0; // 공격 주기 계산용 변수
 
     private Status status; // 이동 속도 등의 정보
+    [SerializeField]
     private NavMeshAgent navMeshAgent; //이동 제어를 위한 NavmeshAgent
     private Transform target; //적의 공격 대상 (플레이어)
     private EnemyMemoryPool enemyMemoryPool; // 적 메모리 풀( 적 오브젝트 비활성화에 사용)
