@@ -44,6 +44,7 @@ public class Status : MonoBehaviour
 
         if(currentHP == 0)
         {
+            Debug.Log("죽음");
             return true;
         }
         return false;

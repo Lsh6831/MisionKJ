@@ -34,14 +34,21 @@ public class EnemyFSM2 : MonoBehaviour
 
     private NavMeshAgent nm;
 
-    //private void Awake()
-    public void Setup(Transform target)
+    private void Awake()
     {
         status = GetComponent<Status>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
         navMeshAgent.updateRotation = false;
+
     }
+    //public void Setup()
+    //{
+    //    status = GetComponent<Status>();
+    //    navMeshAgent = GetComponent<NavMeshAgent>();
+    //    // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
+    //    navMeshAgent.updateRotation = false;
+    //}
 
     private void OnEnable()
     {
@@ -71,6 +78,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Idle()
     {
+        
         // n 초 후에 "배회" 상태로 변경하는 코루틴 실행
         StartCoroutine("AutoChangeFromIdleToWander");
 
@@ -86,10 +94,11 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator AutoChangeFromIdleToWander()
     {
+       
         //1~4초 시간 대기
-        int ChangeTime = Random.Range(1, 5);
+        int changeTime = Random.Range(1, 5);
 
-        yield return new WaitForSeconds(ChangeTime);
+        yield return new WaitForSeconds(changeTime);
 
         // 상태를 "배회"로 변경
         ChangeState(EnemyState2.Wander);
@@ -100,8 +109,8 @@ public class EnemyFSM2 : MonoBehaviour
         float currentTime = 0;
         float maxTime = 10;
         // 이동 속도 설정
-        //navMeshAgent.speed = status.WalkSpeed;
-        nm.speed = status.WalkSpeed;
+        navMeshAgent.speed = status.WalkSpeed;
+        
 
         // 목표 위치 설정
         navMeshAgent.SetDestination(CalculateWanderPosition());
@@ -138,11 +147,13 @@ public class EnemyFSM2 : MonoBehaviour
 
         // 현재 적 캐릭터가 있는 월드의 중심 위치와 크기( 구역을 벗어난 행동을 하지 않도록)
         Vector3 rangePosition = Vector3.zero;
-        Vector3 rangeScale = Vector3.one * 100.0f;
+        Vector3 rangeScale = Vector3.one * 10.0f;
 
         // 자신의 위치를 중심으로 반지름(wanderRadius) 거리, 선택된 각도(wanderJutter)에 위치한 좌표를 목표지점으로 설정
         wanderJitter = Random.Range(wanderJitterMin, wanderJitterMax);
+        
         Vector3 targetPosition = transform.position + SetAngle(wanderRadius, wanderJitter);
+        //Radius 반지름 Jitter 지름
 
         // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절
         targetPosition.x = Mathf.Clamp(targetPosition.x, rangePosition.x - rangePosition.x * 0.5f, rangePosition.x + rangeScale.x * 0.5f);
@@ -162,7 +173,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Pursuit()
     {
-        while ( true )
+        while (true)
         {
             // 이동 속도 설정 (배회할 때는 걷는 속도로 이동, 추적할 때는 뛰는 속도로 이동)
             navMeshAgent.speed = status.RunSpeed;
@@ -182,30 +193,30 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Attack()
     {
-       // 공격할 때는 이동을 멈추도록 설정
-       navMeshAgent.ResetPath();
+        // 공격할 때는 이동을 멈추도록 설정
+        navMeshAgent.ResetPath();
 
-       while ( true )
-       {
-           // 타겟 방향 주시
-           LookRotationToTarget();
+        while (true)
+        {
+            // 타겟 방향 주시
+            LookRotationToTarget();
 
-           // 타겟과의 거리에 따라 행동 선택( 배회, 추격, 원거리 공격)
-           CalculateDistanceToTargetAndSelectstate();
+            // 타겟과의 거리에 따라 행동 선택( 배회, 추격, 원거리 공격)
+            CalculateDistanceToTargetAndSelectstate();
 
-           if( Time.time - lastAttackTime > attackRate)
-           {
-               // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
-               lastAttackTime = Time.time;
+            if (Time.time - lastAttackTime > attackRate)
+            {
+                // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
+                lastAttackTime = Time.time;
 
-            //    // 발사체 생성
-            //    GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-			// 	clone.GetComponent<EnemyProjectile>().Setup(target.position);
+                //    // 발사체 생성
+                //    GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+                // 	clone.GetComponent<EnemyProjectile>().Setup(target.position);
 
-           }
+            }
 
-           yield return null;
-       }
+            yield return null;
+        }
 
     }
 
@@ -230,17 +241,17 @@ public class EnemyFSM2 : MonoBehaviour
 
         // 플레이어(Target) 와 적의 거리 계산 후 거리에 따라 행동 선택
         float distance = Vector3.Distance(target.position, transform.position);
-        
-        if( distance<= attackRange)
+
+        if (distance <= attackRange)
         {
             ChangeState(EnemyState2.Attack);
         }
 
-        else if(distance<=targetRecognitionRange)
+        else if (distance <= targetRecognitionRange)
         {
             ChangeState(EnemyState2.Pursuit);
         }
-        else if(distance>=pursuitLimitRange)
+        else if (distance >= pursuitLimitRange)
         {
             ChangeState(EnemyState2.Wander);
         }
