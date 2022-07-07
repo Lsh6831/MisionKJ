@@ -25,6 +25,8 @@ public class EnemyFSM2 : MonoBehaviour
     [SerializeField]
     private float attackRate = 1; // 공격 속도
 
+    private PlayerAnimatorController animator;
+
     private EnemyState2 enemyState2 = EnemyState2.None; //현재 적 행동 
     private float lastAttackTime = 0; // 공격 주기 계산용 변수
 
@@ -32,12 +34,14 @@ public class EnemyFSM2 : MonoBehaviour
     [SerializeField]
     private NavMeshAgent navMeshAgent; //이동 제어를 위한 NavmeshAgent
 
-    private NavMeshAgent nm;
+    private int a=0;
+
 
     private void Awake()
     {
         status = GetComponent<Status>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<PlayerAnimatorController>();
         // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
         navMeshAgent.updateRotation = false;
 
@@ -49,10 +53,10 @@ public class EnemyFSM2 : MonoBehaviour
     //    // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
     //    navMeshAgent.updateRotation = false;
     //}
-
     private void OnEnable()
     {
         // 적이 활성화될 떄 적의 상태를 "대기"로 설정
+        
         ChangeState(EnemyState2.Idle);
     }
 
@@ -73,7 +77,15 @@ public class EnemyFSM2 : MonoBehaviour
         // 현재 적의 상태를 newState로 설정
         enemyState2 = newState;
         // 새로운 상태 재생
+        Debug.Log("Enemy State : "+enemyState2.ToString());
         StartCoroutine(enemyState2.ToString());
+    }
+
+    private IEnumerator Test(){
+                while(true) {
+            Debug.Log(++a);
+            yield return null; 
+        }
     }
 
     private IEnumerator Idle()
@@ -108,12 +120,14 @@ public class EnemyFSM2 : MonoBehaviour
     {
         float currentTime = 0;
         float maxTime = 10;
+        float maxDIstance = 50;
         // 이동 속도 설정
         navMeshAgent.speed = status.WalkSpeed;
         
 
         // 목표 위치 설정
-        navMeshAgent.SetDestination(CalculateWanderPosition());
+        // navMeshAgent.SetDestination(CalculateWanderPosition());
+        navMeshAgent.SetDestination(TargetPoint(this.gameObject.transform.position,maxDIstance));
 
         // 목표 위치로 회전
         Vector3 to = new Vector3(navMeshAgent.destination.x, 0, navMeshAgent.destination.z);
@@ -138,29 +152,42 @@ public class EnemyFSM2 : MonoBehaviour
             yield return null;
         }
     }
-    private Vector3 CalculateWanderPosition()
+    private Vector3 TargetPoint(Vector3 center,float distance)
     {
-        float wanderRadius = 10; // 현재 위치를 원점으로 하는 원의 반지름
-        int wanderJitter = 0; //현재 각도(wanderJitterMIn~wanderJitterMAx)
-        int wanderJitterMin = 0; //최소 각도
-        int wanderJitterMax = 360; // 최대 각도
+        Vector3 randomPos = Random.insideUnitSphere*distance+center;
 
-        // 현재 적 캐릭터가 있는 월드의 중심 위치와 크기( 구역을 벗어난 행동을 하지 않도록)
-        Vector3 rangePosition = Vector3.zero;
-        Vector3 rangeScale = Vector3.one * 10.0f;
+        NavMeshHit hit;
 
-        // 자신의 위치를 중심으로 반지름(wanderRadius) 거리, 선택된 각도(wanderJutter)에 위치한 좌표를 목표지점으로 설정
-        wanderJitter = Random.Range(wanderJitterMin, wanderJitterMax);
-        
-        Vector3 targetPosition = transform.position + SetAngle(wanderRadius, wanderJitter);
-        //Radius 반지름 Jitter 지름
+        NavMesh.SamplePosition(randomPos,out hit ,distance,NavMesh.AllAreas);
 
-        // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절
-        targetPosition.x = Mathf.Clamp(targetPosition.x, rangePosition.x - rangePosition.x * 0.5f, rangePosition.x + rangeScale.x * 0.5f);
-        targetPosition.y = 0.0f;
-        targetPosition.x = Mathf.Clamp(targetPosition.z, rangePosition.z - rangePosition.z * 0.5f, rangePosition.z + rangeScale.z * 0.5f);
-        return targetPosition;
+        return hit.position;
+
     }
+
+    
+    // private Vector3 CalculateWanderPosition()
+    // {
+    //     float wanderRadius = 10; // 현재 위치를 원점으로 하는 원의 반지름
+    //     int wanderJitter = 0; //현재 각도(wanderJitterMIn~wanderJitterMAx)
+    //     int wanderJitterMin = 0; //최소 각도
+    //     int wanderJitterMax = 360; // 최대 각도
+
+    //     // 현재 적 캐릭터가 있는 월드의 중심 위치와 크기( 구역을 벗어난 행동을 하지 않도록)
+    //     Vector3 rangePosition = Vector3.zero;   
+    //     Vector3 rangeScale = Vector3.one * 200.0f;
+
+    //     // 자신의 위치를 중심으로 반지름(wanderRadius) 거리, 선택된 각도(wanderJutter)에 위치한 좌표를 목표지점으로 설정
+    //     wanderJitter = Random.Range(wanderJitterMin, wanderJitterMax);
+        
+    //     Vector3 targetPosition = transform.position + SetAngle(wanderRadius, wanderJitter);
+    //     //Radius 반지름 Jitter 지름
+
+    //     // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절
+    //     targetPosition.x = Mathf.Clamp(targetPosition.x, rangePosition.x - rangePosition.x * 0.5f, rangePosition.x + rangeScale.x * 0.5f);
+    //     targetPosition.y = 0.0f;
+    //     targetPosition.x = Mathf.Clamp(targetPosition.z, rangePosition.z - rangePosition.z * 0.5f, rangePosition.z + rangeScale.z * 0.5f);
+    //     return targetPosition;
+    // }
     private Vector3 SetAngle(float radius, int angle)
     {
         Vector3 position = Vector3.zero;
@@ -173,6 +200,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Pursuit()
     {
+        
         while (true)
         {
             // 이동 속도 설정 (배회할 때는 걷는 속도로 이동, 추적할 때는 뛰는 속도로 이동)
@@ -180,6 +208,7 @@ public class EnemyFSM2 : MonoBehaviour
 
             // 목표위치를 현재 플레이어의 위치로 설정
             navMeshAgent.SetDestination(target.position);
+
 
             //타겟 방향을 계속 주시하도록 함
             LookRotationToTarget();
