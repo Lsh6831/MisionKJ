@@ -25,7 +25,7 @@ public class EnemyFSM2 : MonoBehaviour
     [SerializeField]
     private float attackRate = 1; // 공격 속도
 
-    private PlayerAnimatorController animator;
+    private Animator animator;
 
     private EnemyState2 enemyState2 = EnemyState2.None; //현재 적 행동 
     private float lastAttackTime = 0; // 공격 주기 계산용 변수
@@ -41,7 +41,7 @@ public class EnemyFSM2 : MonoBehaviour
     {
         status = GetComponent<Status>();
         navMeshAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<PlayerAnimatorController>();
+        animator = GetComponent<Animator>();
         // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
         navMeshAgent.updateRotation = false;
 
@@ -90,7 +90,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Idle()
     {
-        
+        animator.SetBool("onMovement", false);
         // n 초 후에 "배회" 상태로 변경하는 코루틴 실행
         StartCoroutine("AutoChangeFromIdleToWander");
 
@@ -118,6 +118,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Wander()
     {
+        animator.SetBool("onMovement", true);
         float currentTime = 0;
         float maxTime = 10;
         float maxDIstance = 50;
@@ -222,6 +223,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        animator.Play("shoot", 1, 0);
         // 공격할 때는 이동을 멈추도록 설정
         navMeshAgent.ResetPath();
 
