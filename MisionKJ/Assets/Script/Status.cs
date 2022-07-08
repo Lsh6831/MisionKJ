@@ -28,10 +28,15 @@ public class Status : MonoBehaviour
    public int CurrentHP => currentHP;
    public int MaxHP => maxHP;
 
+   public bool isDie =false;
+
+//    public EnemyFSM2 enemyFSM2;
+
 
     private void Awake()
     {
         currentHP = maxHP;
+        // enemyFSM2= GetComponent<EnemyFSM2>();
     }
 
     public bool DescreaseHP(int damage)
@@ -45,7 +50,11 @@ public class Status : MonoBehaviour
         if(currentHP == 0)
         {
             Debug.Log("죽음");
+            isDie=true;
+            walkSpeed=0;
+            runSpeed=0; 
             return true;
+            // enemyFSM2.IsDIe();
         }
         return false;
     }

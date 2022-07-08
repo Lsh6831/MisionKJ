@@ -34,7 +34,7 @@ public class EnemyFSM2 : MonoBehaviour
     [SerializeField]
     private NavMeshAgent navMeshAgent; //이동 제어를 위한 NavmeshAgent
 
-    private int a=0;
+    private bool isDie =false;
 
 
     private void Awake()
@@ -69,6 +69,8 @@ public class EnemyFSM2 : MonoBehaviour
     }
     public void ChangeState(EnemyState2 newState)
     {
+        if(isDie==false)
+        {        
         // 현재 재생중인 상태와 바꾸려고 하는 상태가 같으면 바꿀 필요가 없기 떄문에 return
         if (enemyState2 == newState) return;
 
@@ -79,15 +81,9 @@ public class EnemyFSM2 : MonoBehaviour
         // 새로운 상태 재생
         Debug.Log("Enemy State : "+enemyState2.ToString());
         StartCoroutine(enemyState2.ToString());
-    }
-
-    private IEnumerator Test(){
-                while(true) {
-            Debug.Log(++a);
-            yield return null; 
         }
+        
     }
-
     private IEnumerator Idle()
     {
         animator.SetBool("onMovement", false);
@@ -118,6 +114,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Wander()
     {
+         if(isDie==false){
         animator.SetBool("onMovement", true);
         float currentTime = 0;
         float maxTime = 10;
@@ -152,6 +149,7 @@ public class EnemyFSM2 : MonoBehaviour
 
             yield return null;
         }
+         }
     }
     private Vector3 TargetPoint(Vector3 center,float distance)
     {
@@ -223,7 +221,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Attack()
     {
-        animator.Play("shoot", 1, 0);
+          if(isDie==false){
         // 공격할 때는 이동을 멈추도록 설정
         navMeshAgent.ResetPath();
 
@@ -239,7 +237,9 @@ public class EnemyFSM2 : MonoBehaviour
             {
                 // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
                 lastAttackTime = Time.time;
-
+                // animator.Play("Fire", 1, 0);
+                animator.SetTrigger("onFire");
+                Debug.Log("공격");
                 //    // 발사체 생성
                 //    GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
                 // 	clone.GetComponent<EnemyProjectile>().Setup(target.position);
@@ -248,11 +248,13 @@ public class EnemyFSM2 : MonoBehaviour
 
             yield return null;
         }
+          }
 
     }
 
     private void LookRotationToTarget()
     {
+         if(isDie==false){
         // 목표위치 
         Vector3 to = new Vector3(target.position.x, 0, target.position.z);
         // 내 위치
@@ -264,10 +266,11 @@ public class EnemyFSM2 : MonoBehaviour
         //// 서서히 돌기
         //Quaternion rotation = Quaternion.LookRotation(to - from);
         //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.01f);
-
+         }
     }
     private void CalculateDistanceToTargetAndSelectstate()
     {
+         if(isDie==false){
         if (target == null) return;
 
         // 플레이어(Target) 와 적의 거리 계산 후 거리에 따라 행동 선택
@@ -280,12 +283,15 @@ public class EnemyFSM2 : MonoBehaviour
 
         else if (distance <= targetRecognitionRange)
         {
+            
             ChangeState(EnemyState2.Pursuit);
         }
         else if (distance >= pursuitLimitRange)
         {
             ChangeState(EnemyState2.Wander);
         }
+        
+         }
     }
 
     private void OnDrawGizmos()
@@ -309,6 +315,20 @@ public class EnemyFSM2 : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        bool isDie = status.DescreaseHP(damage);
+        isDie = status.DescreaseHP(damage);
+        if(isDie==true)
+        {
+             navMeshAgent.speed=0f;
+            animator.SetTrigger("isDie");
+            StartCoroutine("IsDie");
+            gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
+        }
+    }
+    private IEnumerator IsDie()
+    {
+        yield return new WaitForSeconds(10f);
+
+        Destroy(gameObject);
+       
     }
 }
