@@ -18,7 +18,6 @@ public class EnemyShooter : MonoBehaviour
     // 에니메이터의 IK갱신
     private void OnAnimatorIK(int layerIndex)
     {// 총의 기준점 gunPivo을 3D 모델의 오른쪽 팔꿈치 위치로 이동
-        Debug.Log("On AnimatorIK 실행");
         gunPivot.position = playerAnimator.GetIKHintPosition(AvatarIKHint.RightElbow);
 
         //IK를 사용하여 왼손의 위치와 회전을 총의 왼쪽 손잡이에 맞춤

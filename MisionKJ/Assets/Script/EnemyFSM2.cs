@@ -34,6 +34,8 @@ public class EnemyFSM2 : MonoBehaviour
     [SerializeField]
     private NavMeshAgent navMeshAgent; //이동 제어를 위한 NavmeshAgent
 
+    public GameObject gun;
+
     private bool isDie =false;
 
 
@@ -316,12 +318,18 @@ public class EnemyFSM2 : MonoBehaviour
     public void TakeDamage(int damage)
     {
         isDie = status.DescreaseHP(damage);
+        Vector3 dieposition = transform.position;
+        
         if(isDie==true)
         {
-             navMeshAgent.speed=0f;
-            animator.SetTrigger("isDie");
+            navMeshAgent.speed=0f;
+            gun.SetActive(false);            
+            gameObject.GetComponent<EnemyShooter>().enabled = false;
+            dieposition = dieposition - Vector3.down;
+            animator.SetTrigger("isDie"); 
             StartCoroutine("IsDie");
             gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
+            gun.SetActive(false);
         }
     }
     private IEnumerator IsDie()
