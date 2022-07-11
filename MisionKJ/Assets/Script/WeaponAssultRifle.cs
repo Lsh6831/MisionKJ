@@ -215,7 +215,7 @@ public class WeaponAssultRifle : WeaponBase
         RaycastHit hit;
         Vector3 targetPoint = Vector3.zero
 ;       // 화면의 중앙 좌표 (AIm 기준으로 Raycast 연산)
-        ray = mainCamera.ViewportPointToRay(Vector2.one * 0.5f);
+        ray = mainCamera.ViewportPointToRay(Vector2.one * 0.5f+Vector2.up*0.00001f);
         // 공격 사거리(attackDIstance) 안에 부딕히는 오브젝트가 있으면 targetPoint 는 광선에 부딕힌 위치
         if(Physics.Raycast(ray,out hit,weaponSetting.attackDistance))
         {

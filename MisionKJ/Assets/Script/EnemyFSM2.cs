@@ -9,9 +9,9 @@ public class EnemyFSM2 : MonoBehaviour
 {
     [Header("Pursuit")]
     [SerializeField]
-    private float targetRecognitionRange = 8; // 인식 범위 (이 범위 안에 들어오면 " Pursuit" 상태로 변경
+    private float targetRecognitionRange = 10; // 인식 범위 (이 범위 안에 들어오면 " Pursuit" 상태로 변경
     [SerializeField]
-    private float pursuitLimitRange = 10; // 추적 범위 ( 이 범위 바깥으로 나가면"Wander" 상태로 변경
+    private float pursuitLimitRange = 12; // 추적 범위 ( 이 범위 바깥으로 나가면"Wander" 상태로 변경
     [SerializeField]
     private Transform target; // 추적 대상
 
@@ -21,7 +21,7 @@ public class EnemyFSM2 : MonoBehaviour
     // [SerializeField]
     // private Transform projectileSpawnPoint; // 발사체 생성 위치
     // [SerializeField]
-    private float attackRange = 5; // 공격 범위 (이 범위 안에 들어오면"Attack" 살태로 변경)
+    private float attackRange = 8; // 공격 범위 (이 범위 안에 들어오면"Attack" 살태로 변경)
     [SerializeField]
     private float attackRate = 1; // 공격 속도
 
@@ -318,22 +318,21 @@ public class EnemyFSM2 : MonoBehaviour
     public void TakeDamage(int damage)
     {
         isDie = status.DescreaseHP(damage);
-        Vector3 dieposition = transform.position;
         
         if(isDie==true)
         {
-            navMeshAgent.speed=0f;
-            gun.SetActive(false);            
-            gameObject.GetComponent<EnemyShooter>().enabled = false;
-            dieposition = dieposition - Vector3.down;
-            animator.SetTrigger("isDie"); 
+
             StartCoroutine("IsDie");
-            gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
-            gun.SetActive(false);
+            
         }
     }
     private IEnumerator IsDie()
     {
+            navMeshAgent.speed=0f;
+            gun.SetActive(false);            
+            gameObject.GetComponent<EnemyShooter>().enabled = false;            
+            gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
+            animator.SetTrigger("isDie"); 
         yield return new WaitForSeconds(10f);
 
         Destroy(gameObject);
