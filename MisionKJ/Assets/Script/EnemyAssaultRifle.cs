@@ -11,15 +11,10 @@ public class EnemyAssaultRifle : MonoBehaviour
 
     [Header("Spawn Points")]
     [SerializeField]
-    private Transform casingSpawnPoint; // 탄피 생성 위치
-    [SerializeField]
     private Transform bulletSpawnPoit; // 총알 생성 위치
 
     [Header("Audio Clips")]
     private AudioClip audioClip; // 사운드
-    [SerializeField]
-
-    private CasingMemoryPool casingMemoryPool; // 탄피 생성 후 활성/비활성 관리
     private ImpactMemoryPool impactMemoryPool; // 공격 효과 생성 후 활성/비활성 관리
     public float attackDistance; // 공격 사거리
     public int damage; // 공격 데미지
@@ -30,45 +25,14 @@ public class EnemyAssaultRifle : MonoBehaviour
   private void Awake() 
     {
         
-        casingMemoryPool = GetComponent<CasingMemoryPool>();
         impactMemoryPool = GetComponent<ImpactMemoryPool>();
         animator = GetComponentInParent<Animator>();
         audioClip = GetComponent<AudioClip>();
 
     }
-    private void OnEnable() 
-    {
-      
-    //   muzzleFalshEffect.SetActive(false);
-    } 
-    public void StartWeaponAction(int type=0)
-    {
-        
-        // 마우스 왼쪽 클릭 (공격 시작)
-        if (type ==0)
-        {           
-                OnAttack();
-            
-        }
-
-    }
     public void OnAttack()
     {        
-            
-            
-            
-            //animator.Play("Fire",-1,0);
-            string animation = "Fire";
-            animator.Play(animation, -1, 0);
-           
-            // 공격 사운드 재생
-            // PlaySound(audioClipFire);
-            // 탄피 생성
-            casingMemoryPool.SpawnCasing(casingSpawnPoint.position, transform.right);
-
-            // 광선을 발사해 원하는 위치 공격 (+impact Effect)
             TwostepRaycast();
-        
     }
 
     private void TwostepRaycast()

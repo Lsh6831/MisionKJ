@@ -16,14 +16,16 @@ public class EnemyFSM2 : MonoBehaviour
     private Transform target; // 추적 대상
 
     [Header("Attack")]
-    // [SerializeField]
-    // private GameObject projectilePrefab; // 발사체 프리팹
-    // [SerializeField]
-    // private Transform projectileSpawnPoint; // 발사체 생성 위치
-    // [SerializeField]
+    [SerializeField]
+    private GameObject projectilePrefab; // 발사체 프리팹
+    [SerializeField]
+    private Transform projectileSpawnPoint; // 발사체 생성 위치
+    [SerializeField]
     private float attackRange = 8; // 공격 범위 (이 범위 안에 들어오면"Attack" 살태로 변경)
     [SerializeField]
-    private float attackRate = 1; // 공격 속도
+    private float attackRate = 2; // 공격 속도
+    [SerializeField]
+    private GameObject muzzleFalshEffect; // 총구 임펙트 (on//off)
 
     private Animator animator;
 
@@ -48,13 +50,6 @@ public class EnemyFSM2 : MonoBehaviour
         navMeshAgent.updateRotation = false;
 
     }
-    //public void Setup()
-    //{
-    //    status = GetComponent<Status>();
-    //    navMeshAgent = GetComponent<NavMeshAgent>();
-    //    // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
-    //    navMeshAgent.updateRotation = false;
-    //}
     private void OnEnable()
     {
         // 적이 활성화될 떄 적의 상태를 "대기"로 설정
@@ -183,7 +178,7 @@ public class EnemyFSM2 : MonoBehaviour
     //     Vector3 targetPosition = transform.position + SetAngle(wanderRadius, wanderJitter);
     //     //Radius 반지름 Jitter 지름
 
-    //     // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절
+    //     // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절    
     //     targetPosition.x = Mathf.Clamp(targetPosition.x, rangePosition.x - rangePosition.x * 0.5f, rangePosition.x + rangeScale.x * 0.5f);
     //     targetPosition.y = 0.0f;
     //     targetPosition.x = Mathf.Clamp(targetPosition.z, rangePosition.z - rangePosition.z * 0.5f, rangePosition.z + rangeScale.z * 0.5f);
@@ -239,12 +234,11 @@ public class EnemyFSM2 : MonoBehaviour
             {
                 // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
                 lastAttackTime = Time.time;
-                // animator.Play("Fire", 1, 0);
                 animator.SetTrigger("onFire");
                 Debug.Log("공격");
-                //    // 발사체 생성
-                //    GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-                // 	clone.GetComponent<EnemyProjectile>().Setup(target.position);
+                   // 발사체 생성
+                   GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+                	clone.GetComponent<EnemyProjectile>().Setup(target.position);
 
             }
 
@@ -274,7 +268,6 @@ public class EnemyFSM2 : MonoBehaviour
     {
          if(isDie==false){
         if (target == null) return;
-
         // 플레이어(Target) 와 적의 거리 계산 후 거리에 따라 행동 선택
         float distance = Vector3.Distance(target.position, transform.position);
 

@@ -5,7 +5,7 @@ public class EnemyProjectile : MonoBehaviour
 {
     private MovementTransform movement;
     private float projectileDistance = 30; //�߻�ü �ִ� �߻�Ÿ�
-    private int damage =5; // 발사체 공격력
+    private int damage =30; // 발사체 공격력
     public void Setup(Vector3 position)
     {
         movement = GetComponent<MovementTransform>();
@@ -37,7 +37,7 @@ public class EnemyProjectile : MonoBehaviour
         if( other.CompareTag("Player"))
         {
             Debug.Log("Player Hit");
-            // other.GetComponent<PlayerController>().TakeDamage(damage);
+            other.GetComponent<PlayerController>().TakeDamage(damage);
 
             Destroy(gameObject);
         }

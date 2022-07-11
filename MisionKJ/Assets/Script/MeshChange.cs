@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class MeshChange : MonoBehaviour
 {
-  SkinnedMeshRenderer skinnedMeshRenderer;
+    
+    public SkinnedMeshRenderer skinnedMeshRenderer;
+    public MeshFilter meshFilter;
 
   void Awake()
   {
-
+        skinnedMeshRenderer.sharedMesh = meshFilter.mesh;
   }
     
 }

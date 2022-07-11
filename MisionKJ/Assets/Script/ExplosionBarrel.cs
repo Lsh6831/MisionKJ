@@ -49,7 +49,7 @@ public class ExplosionBarrel : InteractionObject
             }
 
             //폭발 범위에 부딪힌 오브젝트가 적 캐릭터일 때 처리
-            EnemyFSM enemy = hit.GetComponentInParent<EnemyFSM>();
+            EnemyFSM2 enemy = hit.GetComponentInParent<EnemyFSM2>();
             if(enemy !=null)
             {
                 enemy.TakeDamage(300);
