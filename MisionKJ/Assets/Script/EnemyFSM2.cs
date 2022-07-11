@@ -274,7 +274,6 @@ public class EnemyFSM2 : MonoBehaviour
     {
          if(isDie==false){
         if (target == null) return;
-
         // 플레이어(Target) 와 적의 거리 계산 후 거리에 따라 행동 선택
         float distance = Vector3.Distance(target.position, transform.position);
 
