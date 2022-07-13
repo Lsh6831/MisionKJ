@@ -11,6 +11,7 @@ public class WeaponGrenade : WeaponBase
 	[Header("Grenade")]
 	[SerializeField]
 	private	GameObject			grenadePrefab;		// 수류탄 프리팹
+	[SerializeField]
 	private	Transform			grenadeSpawnPoint;	// 수류탄 생성 위치
 
 	private void OnEnable()
@@ -84,13 +85,13 @@ public class WeaponGrenade : WeaponBase
 		onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
 	}
 
-	public override void IncreaseMagazine(int ammo)
-	{
-		// 
-		weaponSetting.currentAmmo = weaponSetting.currentAmmo + ammo > weaponSetting.maxAmmo ?
-									weaponSetting.maxAmmo : weaponSetting.currentAmmo + ammo;
+	//public override void IncreaseMagazine(int ammo)
+	//{
+	//	// 
+	//	weaponSetting.currentAmmo = weaponSetting.currentAmmo + ammo > weaponSetting.maxAmmo ?
+	//								weaponSetting.maxAmmo : weaponSetting.currentAmmo + ammo;
 
-		onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
-	}
+	//	onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
+	//}
 }
 

@@ -41,5 +41,10 @@ public class EnemyProjectile : MonoBehaviour
 
             Destroy(gameObject);
         }
+        if (other.tag =="ImpactNormal")
+        {
+            Debug.Log("Wall Hit");
+            Destroy(gameObject);
+        }
     }
 }

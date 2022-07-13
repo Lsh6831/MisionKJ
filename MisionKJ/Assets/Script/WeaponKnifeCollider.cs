@@ -38,7 +38,7 @@ public class WeaponKnifeCollider : MonoBehaviour
 
 		if ( other.CompareTag("ImpactEnemy") )
 		{
-			other.GetComponentInParent<EnemyFSM>().TakeDamage(damage);
+			other.GetComponentInParent<EnemyFSM2>().TakeDamage(damage);
 		}
 		else if ( other.CompareTag("InteractionObject") )
 		{

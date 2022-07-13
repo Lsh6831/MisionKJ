@@ -5,11 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
-      ticks: 637931521400000000
-=======
-      ticks: 637922012792011711
->>>>>>> 1cca383b8931dd1866c5702a3e2d59b560e3200d
+      ticks: 637932364140000000
     m_Hash: 2446848982
   m_LockFileStatus:
     m_FilePath: D:/unity/Github/3T/MisionKJ/MisionKJ/Packages/packages-lock.json
@@ -17,11 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
-      ticks: 637931521400000000
-=======
-      ticks: 637922012796654402
->>>>>>> 1cca383b8931dd1866c5702a3e2d59b560e3200d
+      ticks: 637932364140000000
     m_Hash: 3950737671
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

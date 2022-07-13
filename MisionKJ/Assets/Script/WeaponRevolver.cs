@@ -173,7 +173,7 @@ public class WeaponRevolver : WeaponBase
 
             if (hit.transform.CompareTag("ImpactEnemy"))
             {
-                hit.transform.GetComponent<EnemyFSM>().TakeDamage(weaponSetting.damage);
+                hit.transform.GetComponent<EnemyFSM2>().TakeDamage(weaponSetting.damage);
             }
             else if (hit.transform.CompareTag("InteractionObject"))
             {

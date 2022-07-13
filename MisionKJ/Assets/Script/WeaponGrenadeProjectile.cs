@@ -10,7 +10,7 @@ public class WeaponGrenadeProjectile : MonoBehaviour
     [SerializeField]
     private float explosionForce = 500.0f;
     [SerializeField]
-    private float throwForce = 1000.0f;
+    private float throwForce = 100.0f;
 
     private int explosionDamage;
     private new Rigidbody rigidbody;
@@ -41,7 +41,7 @@ public class WeaponGrenadeProjectile : MonoBehaviour
             }
 
             // ���� ������ �ε��� ������Ʈ�� �� ĳ������ �� ó��
-            EnemyFSM enemy = hit.GetComponentInParent<EnemyFSM>();
+            EnemyFSM2 enemy = hit.GetComponentInParent<EnemyFSM2>();
             if (enemy != null)
             {
                 enemy.TakeDamage(explosionDamage);
