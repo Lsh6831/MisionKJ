@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum EnemyState2 { None = -1 , Idle =0, Wander,Pursuit,Attack,}
+public enum EnemyState2 { None = -1, Idle = 0, Wander, Pursuit, Attack, }
 
 public class EnemyFSM2 : MonoBehaviour
 {
     [Header("Pursuit")]
     [SerializeField]
-    private float targetRecognitionRange = 10; // 인식 범위 (이 범위 안에 들어오면 " Pursuit" 상태로 변경
+    private float targetRecognitionRange = 12; // 인식 범위 (이 범위 안에 들어오면 " Pursuit" 상태로 변경
     [SerializeField]
-    private float pursuitLimitRange = 12; // 추적 범위 ( 이 범위 바깥으로 나가면"Wander" 상태로 변경
+    private float pursuitLimitRange = 15; // 추적 범위 ( 이 범위 바깥으로 나가면"Wander" 상태로 변경
     [SerializeField]
     private Transform target; // 추적 대상
 
@@ -21,11 +21,9 @@ public class EnemyFSM2 : MonoBehaviour
     [SerializeField]
     private Transform projectileSpawnPoint; // 발사체 생성 위치
     [SerializeField]
-    private float attackRange = 8; // 공격 범위 (이 범위 안에 들어오면"Attack" 살태로 변경)
+    private float attackRange = 10; // 공격 범위 (이 범위 안에 들어오면"Attack" 살태로 변경)
     [SerializeField]
-    private float attackRate = 2; // 공격 속도
-    [SerializeField]
-    private GameObject muzzleFalshEffect; // 총구 임펙트 (on//off)
+    private float attackRate = 1; // 공격 속도
 
     private Animator animator;
 
@@ -37,8 +35,14 @@ public class EnemyFSM2 : MonoBehaviour
     private NavMeshAgent navMeshAgent; //이동 제어를 위한 NavmeshAgent
 
     public GameObject gun;
+    [SerializeField]
+    private Camera mainCamera; //광선 발사
+    [SerializeField]
+    private Transform bulletSpawnPoit;
 
-    private bool isDie =false;
+    private bool isDie = false;
+    private bool isDamage = false;
+
 
 
     private void Awake()
@@ -50,10 +54,17 @@ public class EnemyFSM2 : MonoBehaviour
         navMeshAgent.updateRotation = false;
 
     }
+    //public void Setup()
+    //{
+    //    status = GetComponent<Status>();
+    //    navMeshAgent = GetComponent<NavMeshAgent>();
+    //    // NavMeshAgent 컴포넌트에서 회전을 업데이트 하지 않도록 설정
+    //    navMeshAgent.updateRotation = false;
+    //}
     private void OnEnable()
     {
         // 적이 활성화될 떄 적의 상태를 "대기"로 설정
-        
+
         ChangeState(EnemyState2.Idle);
     }
 
@@ -66,20 +77,20 @@ public class EnemyFSM2 : MonoBehaviour
     }
     public void ChangeState(EnemyState2 newState)
     {
-        if(isDie==false)
-        {        
-        // 현재 재생중인 상태와 바꾸려고 하는 상태가 같으면 바꿀 필요가 없기 떄문에 return
-        if (enemyState2 == newState) return;
+        if (isDie == false)
+        {
+            // 현재 재생중인 상태와 바꾸려고 하는 상태가 같으면 바꿀 필요가 없기 떄문에 return
+            if (enemyState2 == newState) return;
 
-        // 이전에 재생중이던 상태 종료
-        StopCoroutine(enemyState2.ToString());
-        // 현재 적의 상태를 newState로 설정
-        enemyState2 = newState;
-        // 새로운 상태 재생
-        Debug.Log("Enemy State : "+enemyState2.ToString());
-        StartCoroutine(enemyState2.ToString());
+            // 이전에 재생중이던 상태 종료
+            StopCoroutine(enemyState2.ToString());
+            // 현재 적의 상태를 newState로 설정
+            enemyState2 = newState;
+            // 새로운 상태 재생
+            Debug.Log("Enemy State : " + enemyState2.ToString());
+            StartCoroutine(enemyState2.ToString());
         }
-        
+
     }
     private IEnumerator Idle()
     {
@@ -87,7 +98,7 @@ public class EnemyFSM2 : MonoBehaviour
         // n 초 후에 "배회" 상태로 변경하는 코루틴 실행
         StartCoroutine("AutoChangeFromIdleToWander");
 
-        while (true )
+        while (true)
         {
             // "대기" 상태일 떄 하는 행동
             // 타겟과의 거리에 따라 행동 선택(배회,추격,원거리 공격)
@@ -99,7 +110,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator AutoChangeFromIdleToWander()
     {
-       
+
         //1~4초 시간 대기
         int changeTime = Random.Range(1, 5);
 
@@ -111,56 +122,57 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Wander()
     {
-         if(isDie==false){
-        animator.SetBool("onMovement", true);
-        float currentTime = 0;
-        float maxTime = 10;
-        float maxDIstance = 50;
-        // 이동 속도 설정
-        navMeshAgent.speed = status.WalkSpeed;
-        
-
-        // 목표 위치 설정
-        // navMeshAgent.SetDestination(CalculateWanderPosition());
-        navMeshAgent.SetDestination(TargetPoint(this.gameObject.transform.position,maxDIstance));
-
-        // 목표 위치로 회전
-        Vector3 to = new Vector3(navMeshAgent.destination.x, 0, navMeshAgent.destination.z);
-        Vector3 from = new Vector3(transform.position.x, 0, transform.position.z);
-        transform.rotation = Quaternion.LookRotation(to - from);
-
-        while ( true )
+        if (isDie == false)
         {
-            currentTime += Time.deltaTime;
+            animator.SetBool("onMovement", true);
+            float currentTime = 0;
+            float maxTime = 10;
+            float maxDIstance = 50;
+            // 이동 속도 설정
+            navMeshAgent.speed = status.WalkSpeed;
 
-            // 목표위치에 근접하게 도달하거나 너무 오랜시간동안 배회하기 상태에 머물러 있으면
-            to = new Vector3(navMeshAgent.destination.x, 0, navMeshAgent.destination.z);
-            from = new Vector3(transform.position.x, 0, transform.position.z);
-            if((to-from).sqrMagnitude<0.01f||currentTime>=maxTime)
+
+            // 목표 위치 설정
+            // navMeshAgent.SetDestination(CalculateWanderPosition());
+            navMeshAgent.SetDestination(TargetPoint(this.gameObject.transform.position, maxDIstance));
+
+            // 목표 위치로 회전
+            Vector3 to = new Vector3(navMeshAgent.destination.x, 0, navMeshAgent.destination.z);
+            Vector3 from = new Vector3(transform.position.x, 0, transform.position.z);
+            transform.rotation = Quaternion.LookRotation(to - from);
+
+            while (true)
             {
-                // 상태를 "대기"로 변경
-                ChangeState(EnemyState2.Idle);
-            }
-            // 타겟과의 거리에 따라 행동 선택(배회,추격,원거리 공격)
-            CalculateDistanceToTargetAndSelectstate();
+                currentTime += Time.deltaTime;
 
-            yield return null;
+                // 목표위치에 근접하게 도달하거나 너무 오랜시간동안 배회하기 상태에 머물러 있으면
+                to = new Vector3(navMeshAgent.destination.x, 0, navMeshAgent.destination.z);
+                from = new Vector3(transform.position.x, 0, transform.position.z);
+                if ((to - from).sqrMagnitude < 0.01f || currentTime >= maxTime)
+                {
+                    // 상태를 "대기"로 변경
+                    ChangeState(EnemyState2.Idle);
+                }
+                // 타겟과의 거리에 따라 행동 선택(배회,추격,원거리 공격)
+                CalculateDistanceToTargetAndSelectstate();
+
+                yield return null;
+            }
         }
-         }
     }
-    private Vector3 TargetPoint(Vector3 center,float distance)
+    private Vector3 TargetPoint(Vector3 center, float distance)
     {
-        Vector3 randomPos = Random.insideUnitSphere*distance+center;
+        Vector3 randomPos = Random.insideUnitSphere * distance + center;
 
         NavMeshHit hit;
 
-        NavMesh.SamplePosition(randomPos,out hit ,distance,NavMesh.AllAreas);
+        NavMesh.SamplePosition(randomPos, out hit, distance, NavMesh.AllAreas);
 
         return hit.position;
 
     }
 
-    
+
     // private Vector3 CalculateWanderPosition()
     // {
     //     float wanderRadius = 10; // 현재 위치를 원점으로 하는 원의 반지름
@@ -174,11 +186,11 @@ public class EnemyFSM2 : MonoBehaviour
 
     //     // 자신의 위치를 중심으로 반지름(wanderRadius) 거리, 선택된 각도(wanderJutter)에 위치한 좌표를 목표지점으로 설정
     //     wanderJitter = Random.Range(wanderJitterMin, wanderJitterMax);
-        
+
     //     Vector3 targetPosition = transform.position + SetAngle(wanderRadius, wanderJitter);
     //     //Radius 반지름 Jitter 지름
 
-    //     // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절    
+    //     // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절
     //     targetPosition.x = Mathf.Clamp(targetPosition.x, rangePosition.x - rangePosition.x * 0.5f, rangePosition.x + rangeScale.x * 0.5f);
     //     targetPosition.y = 0.0f;
     //     targetPosition.x = Mathf.Clamp(targetPosition.z, rangePosition.z - rangePosition.z * 0.5f, rangePosition.z + rangeScale.z * 0.5f);
@@ -196,7 +208,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Pursuit()
     {
-        
+
         while (true)
         {
             // 이동 속도 설정 (배회할 때는 걷는 속도로 이동, 추적할 때는 뛰는 속도로 이동)
@@ -218,75 +230,81 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Attack()
     {
-          if(isDie==false){
+
         // 공격할 때는 이동을 멈추도록 설정
         navMeshAgent.ResetPath();
 
         while (true)
         {
+
             // 타겟 방향 주시
             LookRotationToTarget();
 
             // 타겟과의 거리에 따라 행동 선택( 배회, 추격, 원거리 공격)
             CalculateDistanceToTargetAndSelectstate();
 
-            if (Time.time - lastAttackTime > attackRate)
+            if (Time.time - lastAttackTime > attackRate && !isDie)
             {
+               
                 // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
                 lastAttackTime = Time.time;
+                // animator.Play("Fire", 1, 0);
                 animator.SetTrigger("onFire");
-                Debug.Log("공격");
-                   // 발사체 생성
-                   GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-                	clone.GetComponent<EnemyProjectile>().Setup(target.position);
+                // 발사체 생성
+                GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+                clone.GetComponent<EnemyProjectile>().Setup(target.position);
 
             }
 
             yield return null;
+
         }
-          }
+
 
     }
 
     private void LookRotationToTarget()
     {
-         if(isDie==false){
-        // 목표위치 
-        Vector3 to = new Vector3(target.position.x, 0, target.position.z);
-        // 내 위치
-        Vector3 from = new Vector3(transform.position.x, 0, transform.position.z);
+        if (isDie == false)
+        {
+            // 목표위치 
+            Vector3 to = new Vector3(target.position.x, 0, target.position.z);
+            // 내 위치
+            Vector3 from = new Vector3(transform.position.x, 0, transform.position.z);
 
-        //바로 돌기
-        transform.rotation = Quaternion.LookRotation(to - from);
+            //바로 돌기
+            transform.rotation = Quaternion.LookRotation(to - from);
 
-        //// 서서히 돌기
-        //Quaternion rotation = Quaternion.LookRotation(to - from);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.01f);
-         }
+            //// 서서히 돌기
+            //Quaternion rotation = Quaternion.LookRotation(to - from);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.01f);
+        }
     }
     private void CalculateDistanceToTargetAndSelectstate()
     {
-         if(isDie==false){
-        if (target == null) return;
-        // 플레이어(Target) 와 적의 거리 계산 후 거리에 따라 행동 선택
-        float distance = Vector3.Distance(target.position, transform.position);
+        if (isDamage == false)
+        {
+            if (target == null) return;
+            // 플레이어(Target) 와 적의 거리 계산 후 거리에 따라 행동 선택
+            float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= attackRange)
-        {
-            ChangeState(EnemyState2.Attack);
-        }
+            if (distance <= attackRange)
+            {
 
-        else if (distance <= targetRecognitionRange)
-        {
-            
-            ChangeState(EnemyState2.Pursuit);
+                ChangeState(EnemyState2.Attack);
+            }
+
+            else if (distance <= targetRecognitionRange)
+            {
+                ChangeState(EnemyState2.Pursuit);
+            }
+            else if (distance >= pursuitLimitRange)
+            {
+                ChangeState(EnemyState2.Wander);
+            }
+
+
         }
-        else if (distance >= pursuitLimitRange)
-        {
-            ChangeState(EnemyState2.Wander);
-        }
-        
-         }
     }
 
     private void OnDrawGizmos()
@@ -310,25 +328,31 @@ public class EnemyFSM2 : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        isDamage = true;
         isDie = status.DescreaseHP(damage);
-        
-        if(isDie==true)
+        Invoke("DisDamage",0.5f);
+        ChangeState(EnemyState2.Pursuit);
+        if (isDie == true)
         {
-
-            StartCoroutine("IsDie");
             
+            StartCoroutine("IsDie");
+
         }
+    }
+    private void DisDamage()
+    {
+        isDamage=false;
     }
     private IEnumerator IsDie()
     {
-            navMeshAgent.speed=0f;
-            gun.SetActive(false);            
-            gameObject.GetComponent<EnemyShooter>().enabled = false;            
-            gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
-            animator.SetTrigger("isDie"); 
+        navMeshAgent.speed = 0f;
+        gun.SetActive(false);
+        gameObject.GetComponent<EnemyShooter>().enabled = false;
+        gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
+        animator.SetTrigger("isDie");
         yield return new WaitForSeconds(10f);
 
         Destroy(gameObject);
-       
+
     }
 }

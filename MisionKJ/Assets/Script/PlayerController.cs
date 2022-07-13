@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Status status; // 이동속도 등의 플레이어 정보   
     private AudioSource audioSource; // 사운드 재생 제어
     private WeaponBase weapon; // 모든 무기가 상속받는 기반 클래스
+    private bool iszoom = false;
 
     private void Awake() 
         {
@@ -115,14 +116,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             weapon.StartWeaponAction(1);
+            iszoom = true;
         }
         else if (Input.GetMouseButtonUp(1))
         {
             weapon.StartWeaponAction(1);
+            iszoom =false;
         }
 
 
-        if (Input.GetKeyDown(keyCodeReload))
+        if (Input.GetKeyDown(keyCodeReload)&&!iszoom)
              {
                  weapon.StartReload();
              }
