@@ -65,4 +65,8 @@ public class Status : MonoBehaviour
         currentHP = currentHP + hp >maxHP ? maxHP : currentHP +hp;
         onHPEvent.Invoke(previousHP,currentHP);
     }   
+    public void MaxHealth()
+    {
+        currentHP=maxHP;
+    }
 }

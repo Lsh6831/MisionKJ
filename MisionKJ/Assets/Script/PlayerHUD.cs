@@ -43,7 +43,6 @@ public class PlayerHUD : MonoBehaviour
     private Image imageBloodScreen; // 플레이어가 공격받았을 떄 화면에 표시되는 이미지
     [SerializeField]
     private AnimationCurve curveBloodScreen;
-   
 
 
     private void Awake()
@@ -141,5 +140,4 @@ public class PlayerHUD : MonoBehaviour
             magazineList[i].SetActive(true);
         }
     }
-
 }

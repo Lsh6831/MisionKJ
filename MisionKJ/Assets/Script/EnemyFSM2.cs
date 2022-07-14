@@ -87,7 +87,6 @@ public class EnemyFSM2 : MonoBehaviour
             // 현재 적의 상태를 newState로 설정
             enemyState2 = newState;
             // 새로운 상태 재생
-            Debug.Log("Enemy State : " + enemyState2.ToString());
             StartCoroutine(enemyState2.ToString());
         }
 
@@ -150,7 +149,6 @@ public class EnemyFSM2 : MonoBehaviour
                 from = new Vector3(transform.position.x, 0, transform.position.z);
                 if ((to - from).sqrMagnitude < 0.01f || currentTime >= maxTime)
                 {
-                    // 상태를 "대기"로 변경
                     ChangeState(EnemyState2.Idle);
                 }
                 // 타겟과의 거리에 따라 행동 선택(배회,추격,원거리 공격)

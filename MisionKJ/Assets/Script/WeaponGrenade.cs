@@ -84,6 +84,11 @@ public class WeaponGrenade : WeaponBase
 		weaponSetting.currentAmmo --;
 		onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
 	}
+	public void ChargeMaxGrenade()
+	{
+		weaponSetting.currentAmmo = weaponSetting.maxAmmo;
+		onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
+	}
 
 	//public override void IncreaseMagazine(int ammo)
 	//{

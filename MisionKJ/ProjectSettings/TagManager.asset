@@ -12,6 +12,7 @@ TagManager:
   - ImpactEnemy
   - InteractionObject
   - Item
+  - Box
   layers:
   - Default
   - TransparentFX

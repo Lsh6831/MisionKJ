@@ -23,13 +23,19 @@ public class PlayerController : MonoBehaviour
     private Status status; // 이동속도 등의 플레이어 정보   
     private AudioSource audioSource; // 사운드 재생 제어
     private WeaponBase weapon; // 모든 무기가 상속받는 기반 클래스
+
+
     private bool iszoom = false;
+    private bool boxOpen = false;
+    public bool isMove = true;
+
 
     private void Awake() 
         {
             // 마우스 커서를 보이지 않게 설정하고, 현재 위치에 고정시킨다
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            // Cursor.visible = false;
+            // Cursor.lockState = CursorLockMode.Locked;
+            
 
             rotateToMouse =GetComponent<RotateToMouse>();
             movement = GetComponent<MovementChacterController>();
@@ -43,14 +49,20 @@ public class PlayerController : MonoBehaviour
             UpdateMove();
             UpdateJump();
             UPdateWeaponAction();
+            // BoxOpen();
+            IsMove();           
+
         }
 
         private void UpdateRotate()
+        {
+            if(isMove)
         {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
 
             rotateToMouse.UpdateRotate(mouseX,mouseY);
+        }
         }
 
         private void UpdateMove()
@@ -105,6 +117,8 @@ public class PlayerController : MonoBehaviour
         }
         private void UPdateWeaponAction()
         {
+            if(isMove==true)
+            {
             if( Input.GetMouseButtonDown(0))
             {
                 weapon.StartWeaponAction();
@@ -130,6 +144,7 @@ public class PlayerController : MonoBehaviour
                  weapon.StartReload();
              }
         }
+        }
         public void TakeDamage(int damage)
         {
             bool isDie = status.DescreaseHP(damage);
@@ -144,6 +159,47 @@ public class PlayerController : MonoBehaviour
     {
         weapon = newWeapon;
     }
+    public void IsMove()
+    {
+        // 마우스 커서를 보이지 않게 설정하고, 현재 위치에 고정시킨다
+            if(isMove==true)
+            {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            }
+            if(isMove==false)
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+    }
+   
+    public void MaxGrenade()
+    {
+
+    }
+
+    // private void OnTriggerEnter(Collider other) 
+    // {
+    //     if(other.CompareTag("Box"))
+    //     {
+    //         itemBox.SetActive(true);
+    //         boxOpen=true;
+    //         boxCollider=other;
+    //         Debug.Log("충돌");
+          
+    //     }
+    // }
+    // private void BoxOpen()
+    // {
+    //       if(Input.GetKeyDown(KeyCode.E)&&boxOpen)
+    //         {
+    //             Debug.Log("버튼");
+    //             Time.timeScale=0f;
+    //             boxCollider.GetComponent<ItemBox>().ItemCanvas();
+    //         }
+    // }
+
 
     
 }
