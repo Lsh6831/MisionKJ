@@ -35,16 +35,17 @@ public class EnemyProjectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if( other.CompareTag("Player"))
-        {
+        {   
             Debug.Log("Player Hit");
             other.GetComponent<PlayerController>().TakeDamage(damage);
 
             Destroy(gameObject);
         }
-        if (other.tag =="ImpactNormal")
+        if(other.tag== "ImpactNormal")
         {
             Debug.Log("Wall Hit");
             Destroy(gameObject);
         }
     }
+  
 }   

@@ -582,7 +582,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1321566383}
+        m_TargetAssemblyTypeName: ItemBox, Assembly-CSharp
+        m_MethodName: MaxMagazineButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1030525820
 GameObject:
@@ -596,6 +608,7 @@ GameObject:
   - component: {fileID: 1030525824}
   - component: {fileID: 1030525823}
   - component: {fileID: 1030525822}
+  - component: {fileID: 1030525825}
   m_Layer: 0
   m_Name: Image (1)
   m_TagString: Untagged
@@ -715,8 +728,32 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1321566383}
+        m_TargetAssemblyTypeName: ItemBox, Assembly-CSharp
+        m_MethodName: HealthHPButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1030525825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030525820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9bbc77c47926743a28038bf28bc300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1083609558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1080,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1321566383}
+        m_TargetAssemblyTypeName: ItemBox, Assembly-CSharp
+        m_MethodName: MaxGrenadeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1714673668
 GameObject:
@@ -1304,6 +1353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380412621070683442}
   - component: {fileID: 2947290616096183065}
+  - component: {fileID: 1321566383}
   m_Layer: 0
   m_Name: BoxCollider
   m_TagString: Box
@@ -1338,6 +1388,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2, y: 2.2, z: 2.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1321566383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048060682560730243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c6f5846ce7abd4382853b9ddfac1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemCanvas: {fileID: 431617253}
+  itemBoxOn: {fileID: 0}
+  itemBoxOff: {fileID: 0}
+  grenade: {fileID: 0}
+  assultRifle: {fileID: 0}
 --- !u!1 &7752394116791361025
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,6 +42,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private bool isDie = false;
     private bool isDamage = false;
+    private bool isChange = true;
 
 
 
@@ -77,17 +78,19 @@ public class EnemyFSM2 : MonoBehaviour
     }
     public void ChangeState(EnemyState2 newState)
     {
+        
         if (isDie == false)
         {
-            // 현재 재생중인 상태와 바꾸려고 하는 상태가 같으면 바꿀 필요가 없기 떄문에 return
-            if (enemyState2 == newState) return;
+                // 현재 재생중인 상태와 바꾸려고 하는 상태가 같으면 바꿀 필요가 없기 떄문에 return
+                if (enemyState2 == newState) return;
 
-            // 이전에 재생중이던 상태 종료
-            StopCoroutine(enemyState2.ToString());
-            // 현재 적의 상태를 newState로 설정
-            enemyState2 = newState;
-            // 새로운 상태 재생
-            StartCoroutine(enemyState2.ToString());
+                // 이전에 재생중이던 상태 종료
+                StopCoroutine(enemyState2.ToString());
+                // 현재 적의 상태를 newState로 설정
+                enemyState2 = newState;
+                // 새로운 상태 재생
+                StartCoroutine(enemyState2.ToString());
+            
         }
 
     }
@@ -170,30 +173,6 @@ public class EnemyFSM2 : MonoBehaviour
 
     }
 
-
-    // private Vector3 CalculateWanderPosition()
-    // {
-    //     float wanderRadius = 10; // 현재 위치를 원점으로 하는 원의 반지름
-    //     int wanderJitter = 0; //현재 각도(wanderJitterMIn~wanderJitterMAx)
-    //     int wanderJitterMin = 0; //최소 각도
-    //     int wanderJitterMax = 360; // 최대 각도
-
-    //     // 현재 적 캐릭터가 있는 월드의 중심 위치와 크기( 구역을 벗어난 행동을 하지 않도록)
-    //     Vector3 rangePosition = Vector3.zero;   
-    //     Vector3 rangeScale = Vector3.one * 200.0f;
-
-    //     // 자신의 위치를 중심으로 반지름(wanderRadius) 거리, 선택된 각도(wanderJutter)에 위치한 좌표를 목표지점으로 설정
-    //     wanderJitter = Random.Range(wanderJitterMin, wanderJitterMax);
-
-    //     Vector3 targetPosition = transform.position + SetAngle(wanderRadius, wanderJitter);
-    //     //Radius 반지름 Jitter 지름
-
-    //     // 생성된 목표위치가 자신의 이동구역을 벗어나지 않게 조절
-    //     targetPosition.x = Mathf.Clamp(targetPosition.x, rangePosition.x - rangePosition.x * 0.5f, rangePosition.x + rangeScale.x * 0.5f);
-    //     targetPosition.y = 0.0f;
-    //     targetPosition.x = Mathf.Clamp(targetPosition.z, rangePosition.z - rangePosition.z * 0.5f, rangePosition.z + rangeScale.z * 0.5f);
-    //     return targetPosition;
-    // }
     private Vector3 SetAngle(float radius, int angle)
     {
         Vector3 position = Vector3.zero;
@@ -296,7 +275,7 @@ public class EnemyFSM2 : MonoBehaviour
             {
                 ChangeState(EnemyState2.Pursuit);
             }
-            else if (distance >= pursuitLimitRange)
+            else if (distance >= pursuitLimitRange&&isChange)
             {
                 ChangeState(EnemyState2.Wander);
             }
@@ -330,6 +309,7 @@ public class EnemyFSM2 : MonoBehaviour
         isDie = status.DescreaseHP(damage);
         Invoke("DisDamage",0.5f);
         ChangeState(EnemyState2.Pursuit);
+        isChange = false;
         if (isDie == true)
         {
             

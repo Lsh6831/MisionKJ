@@ -13,6 +13,7 @@ TagManager:
   - InteractionObject
   - Item
   - Box
+  - Bullet
   layers:
   - Default
   - TransparentFX

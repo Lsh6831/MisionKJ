@@ -5,7 +5,8 @@ using UnityEngine;
 public class ItemBox : MonoBehaviour
 {
     public GameObject itemCanvas;
-    public GameObject itemBox;
+    public GameObject itemBoxOn;
+    public GameObject itemBoxOff;
     private bool boxOpen = false;
     private bool canvasOpen = false;
     public GameObject grenade;
@@ -26,7 +27,7 @@ public class ItemBox : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            itemBox.SetActive(true);
+            itemBoxOn.SetActive(true);
             playerController = GetComponent<PlayerController>();
             boxOpen = true;
         }
@@ -35,7 +36,7 @@ public class ItemBox : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            itemBox.SetActive(false);
+            itemBoxOn.SetActive(false);
             boxOpen = false;
         }
     }
@@ -43,7 +44,8 @@ public class ItemBox : MonoBehaviour
     {
         if (boxOpen && Input.GetKeyDown(KeyCode.E))
         {
-            itemBox.SetActive(false);
+            itemBoxOn.SetActive(false);
+            itemBoxOff.SetActive(true);
             canvasOpen = true;
             itemCanvas.SetActive(true);
             Time.timeScale = 0f;
@@ -54,7 +56,8 @@ public class ItemBox : MonoBehaviour
         if (canvasOpen && Input.GetKeyDown(KeyCode.Escape))
         {
 
-            itemBox.SetActive(true);
+            itemBoxOn.SetActive(true);
+            itemBoxOff.SetActive(false);
             canvasOpen = false;
             itemCanvas.SetActive(false);
             Time.timeScale = 1f;
