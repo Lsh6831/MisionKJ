@@ -49,7 +49,7 @@ public class WeaponSwitchSystem : MonoBehaviour
         }
     }
 
-    private void SwitchingWeapon(WeaponType weaponType)
+    public void SwitchingWeapon(WeaponType weaponType)
     {
         // 교체 가능한 무기가 없으면 종료
         if (weapons[(int)weaponType] == null)

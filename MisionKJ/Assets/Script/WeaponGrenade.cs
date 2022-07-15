@@ -34,8 +34,13 @@ public class WeaponGrenade : WeaponBase
 
 	public override void StartWeaponAction(int type = 0)
 	{
+		Debug.Log(type);
+		Debug.Log(isAttack);
+		Debug.Log(weaponSetting.currentAmmo);
 		if ( type == 0 && isAttack == false && weaponSetting.currentAmmo > 0 )
 		{
+			
+			Debug.Log("수류탄준비");
 			StartCoroutine("OnAttack");
 		}
 	}
@@ -78,6 +83,7 @@ public class WeaponGrenade : WeaponBase
 	/// </summary>
 	public void SpawnGrenadeProjectile()
 	{
+		Debug.Log("수류탄");
 		GameObject grenadeClone = Instantiate(grenadePrefab, grenadeSpawnPoint.position, Random.rotation);
 		grenadeClone.GetComponent<WeaponGrenadeProjectile>().Setup(weaponSetting.damage, transform.parent.forward);
 		
@@ -88,6 +94,7 @@ public class WeaponGrenade : WeaponBase
 	{
 		weaponSetting.currentAmmo = weaponSetting.maxAmmo;
 		onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
+		isAttack=false;
 	}
 
 	//public override void IncreaseMagazine(int ammo)

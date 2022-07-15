@@ -9,8 +9,6 @@ public class ItemBox : MonoBehaviour
     public GameObject itemBoxOff;
     private bool boxOpen = false;
     private bool canvasOpen = false;
-    public GameObject grenade;
-    public GameObject assultRifle;
     private PlayerController playerController;
 
     private void Awake()
@@ -48,8 +46,8 @@ public class ItemBox : MonoBehaviour
             itemBoxOff.SetActive(true);
             canvasOpen = true;
             itemCanvas.SetActive(true);
+            GameManager.instance.GameStop();
             Time.timeScale = 0f;
-            GameObject.Find("Player").GetComponent<PlayerController>().isMove = false;
 
         }
 
@@ -60,32 +58,23 @@ public class ItemBox : MonoBehaviour
             itemBoxOff.SetActive(false);
             canvasOpen = false;
             itemCanvas.SetActive(false);
-            Time.timeScale = 1f;
-             GameObject.Find("Player").GetComponent<PlayerController>().isMove = true;
+            GameManager.instance.GameStart();
+            // Time.timeScale = 1f;
 
 
         }
     }
     public void HealthHPButton()
     {
-        GameObject.Find("Player").GetComponent<Status>().IncreaseHP(100);
-        //    playerController.HealthHP();
+      GameManager.instance.HealthHP();
     }
     public void MaxMagazineButton()
-    {
-        // GameObject.Find("arms_assault_rifle_01").SetActive(true);
-        assultRifle.SetActive(true);
-        GameObject.Find("arms_assault_rifle_01").GetComponent<WeaponAssultRifle>().ChargeMaxMagazine();
+    {  
+      GameManager.instance.MaxMagazine();
     }
     public void MaxGrenadeButton()
     {
-        grenade.SetActive(true);
-        // GameObject.Find("arms_hand_grenade").SetActive(true);
-        GameObject.Find("arms_hand_grenade").GetComponent<WeaponGrenade>().ChargeMaxGrenade();
-        // GameObject.Find("arms_hand_grenade").SetActive(false);
-        grenade.SetActive(false);
-        // GameObject.Find("arms_assault_rifle_01").SetActive(true);
-        assultRifle.SetActive(true);
+       GameManager.instance.MaxGrenade();
         
     }
 

@@ -10,7 +10,6 @@ public class EnemyShooter : MonoBehaviour
     private Animator playerAnimator;  // 애니메이터 컴포넌트
      void Start()
     {
-        Debug.Log("EnemyShooter Start!!!");
         playerAnimator=GetComponent<Animator>();           
         // OnAnimatorIK();    
     }

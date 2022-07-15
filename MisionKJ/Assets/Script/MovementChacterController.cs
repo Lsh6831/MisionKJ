@@ -19,6 +19,7 @@ public class MovementChacterController : MonoBehaviour
         set => moveSpeed = Mathf.Max(0, value);  // Mathf.Max = 이동속도가 음수가 되지 않게 한다.
         get => moveSpeed;
     }
+    [SerializeField]
     private CharacterController characterController; // 플레이어 이동 제어를 위한 컴포넌트
 
     private void Awake()
@@ -30,12 +31,14 @@ public class MovementChacterController : MonoBehaviour
     {
         // 1초당 moveForce 속력으로 이동
         characterController.Move(moveForce * Time.deltaTime);
+        
 
         // 허공에 떠있으면 중력만큼 y축 이동속도 감소
         if (!characterController.isGrounded)
         {
             moveForce.y += gravity * Time.deltaTime;
         }
+
     }
 
     public void MoveTo(Vector3 direcion)

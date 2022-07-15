@@ -19,7 +19,9 @@ public class Status : MonoBehaviour
     [SerializeField]
     private int maxHP = 100;
     private int currentHP;
-
+    [SerializeField]
+    private int life = 1;
+    private bool whoPlayer = false;
 
     //외부에서 값 확인하는 용도 get 프로퍼티
    public float WalkSpeed => walkSpeed;
@@ -49,12 +51,29 @@ public class Status : MonoBehaviour
 
         if(currentHP == 0)
         {
+            life--;
+            if(life==2)
+            {
+                whoPlayer=true;
+                GameManager.instance.Die();
+            }
+            else if(life==0)
+            {
             Debug.Log("죽음");
             isDie=true;
             walkSpeed=0;
             runSpeed=0; 
+            if(whoPlayer==true)
+            {
+                GameManager.instance.Die();
+            }
             return true;
             // enemyFSM2.IsDIe();
+            }
+            else
+            {
+                GameManager.instance.Die();
+            }
         }
         return false;
     }
@@ -65,8 +84,4 @@ public class Status : MonoBehaviour
         currentHP = currentHP + hp >maxHP ? maxHP : currentHP +hp;
         onHPEvent.Invoke(previousHP,currentHP);
     }   
-    public void MaxHealth()
-    {
-        currentHP=maxHP;
-    }
 }

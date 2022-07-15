@@ -55,6 +55,9 @@ public class EnemyFSM2 : MonoBehaviour
         navMeshAgent.updateRotation = false;
 
     }
+    private void Update() {
+        
+    }
     //public void Setup()
     //{
     //    status = GetComponent<Status>();
@@ -78,6 +81,7 @@ public class EnemyFSM2 : MonoBehaviour
     }
     public void ChangeState(EnemyState2 newState)
     {
+        Debug.Log(newState);
         
         if (isDie == false)
         {
@@ -207,6 +211,7 @@ public class EnemyFSM2 : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        Debug.Log("공격");
 
         // 공격할 때는 이동을 멈추도록 설정
         navMeshAgent.ResetPath();
@@ -267,13 +272,37 @@ public class EnemyFSM2 : MonoBehaviour
 
             if (distance <= attackRange)
             {
-
-                ChangeState(EnemyState2.Attack);
+             RaycastHit hit;
+             
+             Vector3 targetPoint = Vector3.zero;
+             if(Physics.Raycast(this.transform.position,this.transform.forward, out hit,attackRange))
+             {
+                 targetPoint = hit.point;
+                 
+             }
+              Vector3 attackDirection = (targetPoint - this.transform.position).normalized;
+              if(Physics.Raycast(this.transform.position,attackDirection,out hit,attackRange))
+              {
+                if(hit.transform.CompareTag("ImpactEnemy"))
+                {
+                    return;
+                }
+                else if(hit.transform.CompareTag("Player"))
+                {
+                    ChangeState(EnemyState2.Attack);
+                }
+             }
+             Debug.DrawRay(this.transform.position,attackDirection*attackRange,Color.blue);
             }
+            // if (distance <= attackRange)
+            // {
+            //     ChangeState(EnemyState2.Attack);
+            // }
 
             else if (distance <= targetRecognitionRange)
             {
                 ChangeState(EnemyState2.Pursuit);
+                Debug.Log("아?");
             }
             else if (distance >= pursuitLimitRange&&isChange)
             {

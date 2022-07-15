@@ -24,10 +24,11 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource; // 사운드 재생 제어
     private WeaponBase weapon; // 모든 무기가 상속받는 기반 클래스
 
+    
+
 
     private bool iszoom = false;
     private bool boxOpen = false;
-    public bool isMove = true;
 
 
     private void Awake() 
@@ -36,7 +37,6 @@ public class PlayerController : MonoBehaviour
             // Cursor.visible = false;
             // Cursor.lockState = CursorLockMode.Locked;
             
-
             rotateToMouse =GetComponent<RotateToMouse>();
             movement = GetComponent<MovementChacterController>();
             status = GetComponent<Status>();
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         private void UpdateRotate()
         {
-            if(isMove)
+            if(GameManager.instance.gamesituation == true)
         {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
         }
         private void UPdateWeaponAction()
         {
-            if(isMove==true)
+            if(GameManager.instance.gamesituation)
             {
             if( Input.GetMouseButtonDown(0))
             {
@@ -162,12 +162,12 @@ public class PlayerController : MonoBehaviour
     public void IsMove()
     {
         // 마우스 커서를 보이지 않게 설정하고, 현재 위치에 고정시킨다
-            if(isMove==true)
+            if(GameManager.instance.gamesituation)
             {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             }
-            if(isMove==false)
+            if(!GameManager.instance.gamesituation)
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;

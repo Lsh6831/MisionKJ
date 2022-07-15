@@ -289,5 +289,6 @@ public class WeaponAssultRifle : WeaponBase
                 // 현재 탄 수를 최대로 설정하고, 바뀐 탄 수 정보를 Text UI에 업데이트
                 weaponSetting.currentAmmo = weaponSetting.maxAmmo;
                 onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
+                isAttack=false;
     }
 }
