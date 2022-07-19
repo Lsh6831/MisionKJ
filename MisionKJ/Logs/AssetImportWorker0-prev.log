@@ -1,0 +1,1483 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.28f1 (f5400f52e03f) revision 16072719'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'ko' Physical Memory: 16323 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\unity\2020.3.28f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/unity/Github/3T/MisionKJ/MisionKJ
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+14219
+Successfully changed project path to: D:/unity/Github/3T/MisionKJ/MisionKJ
+D:/unity/Github/3T/MisionKJ/MisionKJ
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 85.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.28f1 (f5400f52e03f)
+[Subsystems] Discovering subsystems at path D:/unity/2020.3.28f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/unity/Github/3T/MisionKJ/MisionKJ/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1b83)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'D:/unity/2020.3.28f1/Editor/Data/Managed'
+Mono path[1] = 'D:/unity/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/unity/2020.3.28f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56744
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/unity/2020.3.28f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001326 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 85.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.607 seconds
+Domain Reload Profiling:
+	ReloadAssembly (607ms)
+		BeginReloadAssembly (80ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (463ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (138ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (201ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (86ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (71ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006628 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A0D13840 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000143847A6CC0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0D1E250 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A09B0400 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A1D0B420 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384EB4010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384F9E650 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0E07010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384EB4010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A09B0400 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0DEA290 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384BC9A60 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A25E7E30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384B52030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A09B0400 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384B52030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A09B0400 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A1693010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384C93480 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A1693010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.114 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1115ms)
+		BeginReloadAssembly (162ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (904ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (315ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (376ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3061 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.3 MB.
+System memory in use after: 200.5 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3520.
+Total: 2.767800 ms (FindLiveObjects: 0.212600 ms CreateObjectMapping: 0.133300 ms MarkObjects: 2.354900 ms  DeleteObjects: 0.066200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/ExternalAssets/c4-bomb
+  artifactKey: Guid(97ef3ec0bffd74247b0a4cd4b8d208b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/c4-bomb using Guid(97ef3ec0bffd74247b0a4cd4b8d208b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be08e7795830863870c45153fcdcd853') in 0.005039 seconds 
+  Import took 0.009767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/ExternalAssets/c4-bomb/source
+  artifactKey: Guid(781f3b27be0374a40b6dab63805a889a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/c4-bomb/source using Guid(781f3b27be0374a40b6dab63805a889a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cbc2497872f2a66cd98155a9105500c') in 0.001904 seconds 
+  Import took 0.006482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.466901 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX
+  artifactKey: Guid(3e1a775fd660d864c8e4da3b7884f13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX using Guid(3e1a775fd660d864c8e4da3b7884f13f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6caea8ed9723c30fb4da6d4214ac929') in 0.002636 seconds 
+  Import took 0.009162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.565663 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs
+  artifactKey: Guid(e944bdb1313e4f847b60812e06dc4e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs using Guid(e944bdb1313e4f847b60812e06dc4e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84fc74d809090a7d39872a17a4946961') in 0.002004 seconds 
+  Import took 0.007394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.528478 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashLOW_Root.prefab
+  artifactKey: Guid(5ff7098700dbdbf4a93dc6ab0d9d92a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashLOW_Root.prefab using Guid(5ff7098700dbdbf4a93dc6ab0d9d92a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8105a103d9196cf11fdba718092a6a56') in 0.233246 seconds 
+  Import took 0.238149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.524188 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Art/Materials/Mat_Explosion.mat
+  artifactKey: Guid(51137797593867e4196368019cc59154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Art/Materials/Mat_Explosion.mat using Guid(51137797593867e4196368019cc59154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff071f22d60597f429afcefd07884757') in 0.034169 seconds 
+  Import took 0.038489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.133691 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashHIGH_Root.prefab
+  artifactKey: Guid(a11dc34cafe3dfd4facb59cfb4e72de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashHIGH_Root.prefab using Guid(a11dc34cafe3dfd4facb59cfb4e72de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceef07712f0d56fb788766fd7499bdf5') in 0.011927 seconds 
+  Import took 0.017177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.584340 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashHIGH_Root.prefab
+  artifactKey: Guid(a11dc34cafe3dfd4facb59cfb4e72de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashHIGH_Root.prefab using Guid(a11dc34cafe3dfd4facb59cfb4e72de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd81d98544970377b9cfb2229ec83beff') in 0.011750 seconds 
+  Import took 0.016687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.823819 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Art/Materials/Mat_Glow.mat
+  artifactKey: Guid(1fdc7a1614f368a4ba62e87a4155c7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Art/Materials/Mat_Glow.mat using Guid(1fdc7a1614f368a4ba62e87a4155c7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56930cecee0878deb9d1112b00c1a1dd') in 0.007773 seconds 
+  Import took 0.013168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.785643 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashLOW_Root.prefab
+  artifactKey: Guid(5ff7098700dbdbf4a93dc6ab0d9d92a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilSplashLOW_Root.prefab using Guid(5ff7098700dbdbf4a93dc6ab0d9d92a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '454648db038bee47421f60a729c50d7d') in 0.010963 seconds 
+  Import took 0.016048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.447532 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailHIGH_Root.prefab
+  artifactKey: Guid(eeb10f3a038431240a6690043924ec2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailHIGH_Root.prefab using Guid(eeb10f3a038431240a6690043924ec2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83e73d2e39ca3c832f85a98af255b388') in 0.008561 seconds 
+  Import took 0.013679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Art/Materials/Mat_Trail.mat
+  artifactKey: Guid(b3bfba2b0fa6cbc4da85fedebb6f5afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Art/Materials/Mat_Trail.mat using Guid(b3bfba2b0fa6cbc4da85fedebb6f5afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02a8174ea95f744c7ce81850acf03602') in 0.009138 seconds 
+  Import took 0.013539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072002 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailHIGH_Root.prefab
+  artifactKey: Guid(eeb10f3a038431240a6690043924ec2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailHIGH_Root.prefab using Guid(eeb10f3a038431240a6690043924ec2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee03072da0b3f196b491ccfcb358a7f4') in 0.008380 seconds 
+  Import took 0.013764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.126394 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailLOW_Root.prefab
+  artifactKey: Guid(569295cc5c2b7b34e8c3d8af549c309e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailLOW_Root.prefab using Guid(569295cc5c2b7b34e8c3d8af549c309e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a21c3c45112c2dff9aa4675b1b4e8f') in 0.008662 seconds 
+  Import took 0.013867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.081531 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailLOW_Root.prefab
+  artifactKey: Guid(569295cc5c2b7b34e8c3d8af549c309e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/Fx_OilTrailLOW_Root.prefab using Guid(569295cc5c2b7b34e8c3d8af549c309e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4095f1095913e86a1c9d1a170aa8252d') in 0.008372 seconds 
+  Import took 0.014069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.398422 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/OilBottle_High.prefab
+  artifactKey: Guid(42d3d29b1bce3214cacf1c6caaf5734d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/OilBottle_High.prefab using Guid(42d3d29b1bce3214cacf1c6caaf5734d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae521d8d4a71d6e565cece0b84d67543') in 0.016598 seconds 
+  Import took 0.022425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.019629 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Prefabs/OilBottle_Low.prefab
+  artifactKey: Guid(05b4c7cb9f43acc4a9950d8d152ae51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Prefabs/OilBottle_Low.prefab using Guid(05b4c7cb9f43acc4a9950d8d152ae51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1896eb274c694a53df38e9b03b93fbf0') in 0.016384 seconds 
+  Import took 0.021479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.373212 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Art
+  artifactKey: Guid(2a9e3920e28b1b344bed66fda6124922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Art using Guid(2a9e3920e28b1b344bed66fda6124922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a797cf5fda06834a1db0a5135905da') in 0.002605 seconds 
+  Import took 0.008443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.531498 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Art/Animation
+  artifactKey: Guid(f287bcda98d35fa4b823fe0e172d68ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Art/Animation using Guid(f287bcda98d35fa4b823fe0e172d68ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd938a3fc18c8d29b5448d92add91c00') in 0.001924 seconds 
+  Import took 0.007287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.449674 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Art/Materials
+  artifactKey: Guid(c4d1248f26bc0e04385ac0b3760d90dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Art/Materials using Guid(c4d1248f26bc0e04385ac0b3760d90dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60bb333b7c9c6e3c03521e3fc6af00ec') in 0.002904 seconds 
+  Import took 0.007596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.705556 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Scenes
+  artifactKey: Guid(282f92bd2106ef1498637db47b0750ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Scenes using Guid(282f92bd2106ef1498637db47b0750ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7d3a138c431fa29a01ed3d7214a653a') in 0.002145 seconds 
+  Import took 0.012729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.513387 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Scripts
+  artifactKey: Guid(3955ce108862e2947a2367d03fa147cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Scripts using Guid(3955ce108862e2947a2367d03fa147cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fda9de09c11722d87eb63aa8a9c549b3') in 0.002183 seconds 
+  Import took 0.007760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.665416 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Scripts/LaunchEffect.cs
+  artifactKey: Guid(12bbf1824f5b25a4787d726fd90bfd3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Scripts/LaunchEffect.cs using Guid(12bbf1824f5b25a4787d726fd90bfd3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d0d9ccf00c4b5ad8392516517b6d98') in 0.012830 seconds 
+  Import took 0.017780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.058607 seconds.
+  path: Assets/ExternalAssets/FireExplosionVFX/Scenes/FxScene.unity
+  artifactKey: Guid(c0d62d2819cfee54984ad52886e77ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets/FireExplosionVFX/Scenes/FxScene.unity using Guid(c0d62d2819cfee54984ad52886e77ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d5c48a7b9c4828d01f3ad68f270f39') in 0.002185 seconds 
+  Import took 0.008629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.173061 seconds.
+  path: Assets/Scenes/Map_v1.unity
+  artifactKey: Guid(5a463281e6e238742a45430f11e82829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map_v1.unity using Guid(5a463281e6e238742a45430f11e82829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2286d985ffb74e94ef0e201579ca39fe') in 0.002241 seconds 
+  Import took 0.007372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.075536 seconds.
+  path: Assets/Scenes/Map_v2.unity
+  artifactKey: Guid(1d35c8ff8df44934ab0d5619746c0699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map_v2.unity using Guid(1d35c8ff8df44934ab0d5619746c0699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d328f08c897d08ce7208214d792180') in 0.002171 seconds 
+  Import took 0.007511 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009893 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A1D27010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2A17A40 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5963040 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A132D830 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0C1F010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A12A0020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5963040 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A44A6030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A12A0020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A132D830 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A775F9F0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A76F9FF0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000143847AB6F0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6146030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A12DAC40 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6146030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A579C020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A435E030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2A17A40 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A1348020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.656 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1657ms)
+		BeginReloadAssembly (339ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (1229ms)
+			LoadAssemblies (400ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (427ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (425ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (319ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3040 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 202.1 MB.
+System memory in use after: 202.4 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3562.
+Total: 2.839300 ms (FindLiveObjects: 0.222800 ms CreateObjectMapping: 0.132800 ms MarkObjects: 2.459700 ms  DeleteObjects: 0.023200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 405.271880 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Cameras/Camera.prefab
+  artifactKey: Guid(ff3468df767ca784b87dc810a8963a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Cameras/Camera.prefab using Guid(ff3468df767ca784b87dc810a8963a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '521c4d79ea7c59fafd6f0dfbe8559107') in 0.032727 seconds 
+  Import took 0.038591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.505542 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Lens Flares/Basic Fire Glow.flare
+  artifactKey: Guid(97799acb0a5f29644875356634905ea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Lens Flares/Basic Fire Glow.flare using Guid(97799acb0a5f29644875356634905ea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e810daa53c409d981c3ae57e5b26d97') in 0.008284 seconds 
+  Import took 0.016631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.220243 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Textures/cloud_4_variants.psd
+  artifactKey: Guid(c4b63316c1599924298ae931e54a3dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Textures/cloud_4_variants.psd using Guid(c4b63316c1599924298ae931e54a3dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb7f2d0f9c243e22a4e618937c5b694c') in 0.191415 seconds 
+  Import took 0.197282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.486300 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop mobile.prefab
+  artifactKey: Guid(578c7b5ceacee2f4ca4c7b9c1ec31b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop mobile.prefab using Guid(578c7b5ceacee2f4ca4c7b9c1ec31b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e39aaf6b4d66cea1db34347b9f8f353') in 0.030461 seconds 
+  Import took 0.035447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.353774 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop fallback.prefab
+  artifactKey: Guid(39051c4c6f9bd604382d68b7a910a9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop fallback.prefab using Guid(39051c4c6f9bd604382d68b7a910a9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef67c93342b233985eeb5db48214e828') in 0.016914 seconds 
+  Import took 0.022135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.299748 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop sharp.prefab
+  artifactKey: Guid(c9afa2a2ad89ebc41897c1247ceddadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop sharp.prefab using Guid(c9afa2a2ad89ebc41897c1247ceddadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e694d69130a44cd0d41fd975e02f5cd6') in 0.048660 seconds 
+  Import took 0.054114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.837572 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop soft.prefab
+  artifactKey: Guid(e5e72c487c3d9574195db877dff604fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop soft.prefab using Guid(e5e72c487c3d9574195db877dff604fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f8a9cd8b5a75ec54298be757c4756f4') in 0.042629 seconds 
+  Import took 0.047534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.721484 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 sharp.prefab
+  artifactKey: Guid(49265d0ec016fc946a15107b9a82b5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 sharp.prefab using Guid(49265d0ec016fc946a15107b9a82b5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd808f1c5e66094d1a6c3130913a54ae') in 0.015899 seconds 
+  Import took 0.021092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.882596 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 soft.prefab
+  artifactKey: Guid(b0fa6e8756f3a9e43b8ca1e482604f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 soft.prefab using Guid(b0fa6e8756f3a9e43b8ca1e482604f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f3e826b3a089b54d17a87d7ca0aedf7') in 0.014344 seconds 
+  Import took 0.019671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.695543 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single fallback.prefab
+  artifactKey: Guid(54b661f759164cb4cb9424de6a512cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single fallback.prefab using Guid(54b661f759164cb4cb9424de6a512cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410e6d7de18f245c669c6774aa167cc9') in 0.015769 seconds 
+  Import took 0.020726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.344129 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single mobile.prefab
+  artifactKey: Guid(f66e014454bdeb942944471c5e19da6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single mobile.prefab using Guid(f66e014454bdeb942944471c5e19da6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fedeb7e6356ce885ae3689bd8ff678e') in 0.012051 seconds 
+  Import took 0.017268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.117699 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single sharp.prefab
+  artifactKey: Guid(7e434543af9a9694eb543bfed5b37dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single sharp.prefab using Guid(7e434543af9a9694eb543bfed5b37dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f3c1fd00d621f389e7b52b68d678b8') in 0.014405 seconds 
+  Import took 0.019994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.687662 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single soft.prefab
+  artifactKey: Guid(4be461bdf6702f64298fb518ce64cc1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single soft.prefab using Guid(4be461bdf6702f64298fb518ce64cc1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c91440631e6d89ad5a6f1afe92065b58') in 0.014674 seconds 
+  Import took 0.019771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.910834 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 fallback.prefab
+  artifactKey: Guid(7070fbe5d358dfd45b3de7d9fddfd386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 fallback.prefab using Guid(7070fbe5d358dfd45b3de7d9fddfd386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '485918989bd73a4d60b296df16757a0d') in 0.011830 seconds 
+  Import took 0.017055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.151178 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire basic mobile.prefab
+  artifactKey: Guid(1c6cf70a4666e5a40ba4bafbc8947b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire basic mobile.prefab using Guid(1c6cf70a4666e5a40ba4bafbc8947b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '768f392913954f5ab96e8d994a4ba512') in 0.021255 seconds 
+  Import took 0.114928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.415524 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire basic fallback.prefab
+  artifactKey: Guid(7432ce044a5b60a4ca79c52e6f7aabc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire basic fallback.prefab using Guid(7432ce044a5b60a4ca79c52e6f7aabc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e877c8abd1e4c035e21a327e1d4c6a') in 0.011420 seconds 
+  Import took 0.016810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.677844 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire basic sharp.prefab
+  artifactKey: Guid(96f9b5b1886f6c9428f333ee2ce06025) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire basic sharp.prefab using Guid(96f9b5b1886f6c9428f333ee2ce06025) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebe4b83197db6e73990f234d5dd0c695') in 0.041008 seconds 
+  Import took 0.046584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.483315 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel fallback.prefab
+  artifactKey: Guid(245191202050321409424466409a4448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel fallback.prefab using Guid(245191202050321409424466409a4448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80effe704e314f974c884cc782a765be') in 0.010672 seconds 
+  Import took 0.015665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.513787 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel mobile.prefab
+  artifactKey: Guid(f7358320598c4a3419cb533d8da4c32e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel mobile.prefab using Guid(f7358320598c4a3419cb533d8da4c32e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fa8b8e9b6b64b443f980ee3479656f0') in 0.010338 seconds 
+  Import took 0.016016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.557946 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel sharp.prefab
+  artifactKey: Guid(96918d1d02a66fe4c8b8ec5bb89b04cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel sharp.prefab using Guid(96918d1d02a66fe4c8b8ec5bb89b04cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd58d59bd62920110b39c48303a458777') in 0.011595 seconds 
+  Import took 0.017225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.474755 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel soft.prefab
+  artifactKey: Guid(7a6f5d14b8901a34ab435748f593748e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Fire fuel soft.prefab using Guid(7a6f5d14b8901a34ab435748f593748e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aaa51a93e032ae4c1f274944df411ba') in 0.011730 seconds 
+  Import took 0.016602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.859260 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Flamethrower fallback.prefab
+  artifactKey: Guid(6e6d369a64a9b12448b244e27dd2703f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Flamethrower fallback.prefab using Guid(6e6d369a64a9b12448b244e27dd2703f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d4b89eb824bb30622a8f021871291e') in 0.012007 seconds 
+  Import took 0.016780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.524726 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Flamethrower mobile.prefab
+  artifactKey: Guid(75d81dd229c1a8449b4fdf8dbba00c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Flamethrower mobile.prefab using Guid(75d81dd229c1a8449b4fdf8dbba00c6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f1607354d2f5e26c9a21b22d29750d5') in 0.010343 seconds 
+  Import took 0.015048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.746853 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Flamethrower sharp.prefab
+  artifactKey: Guid(4f8a3a0b449257842b03d9918aefd150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Flamethrower sharp.prefab using Guid(4f8a3a0b449257842b03d9918aefd150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab2a784685d97d080eed93058dd7e2b') in 0.015277 seconds 
+  Import took 0.060444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.722622 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials/Cloud alpha.mat
+  artifactKey: Guid(2196b6592283aba42837afc47c92244c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials/Cloud alpha.mat using Guid(2196b6592283aba42837afc47c92244c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05d28cee08079bf7a986b32d007b50f8') in 0.020294 seconds 
+  Import took 0.024922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.051992 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Smoke basic fallback.prefab
+  artifactKey: Guid(eab30caa452880045806afdce010d481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Smoke basic fallback.prefab using Guid(eab30caa452880045806afdce010d481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27f1bd9125eb6ac20290f7b3ce2f337e') in 0.011752 seconds 
+  Import took 0.016387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.909330 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 sharp.prefab
+  artifactKey: Guid(866a4ac022f2a8e46b9f482d65401a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 sharp.prefab using Guid(866a4ac022f2a8e46b9f482d65401a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95a023db9fbd5d262affd94743eb63fc') in 0.013280 seconds 
+  Import took 0.019008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.321466 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 soft.prefab
+  artifactKey: Guid(08af55dd04af6094389b71d80b600049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 soft.prefab using Guid(08af55dd04af6094389b71d80b600049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c6179f8bc53723a35bd4438412251de') in 0.013055 seconds 
+  Import took 0.017918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 105.148484 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts
+  artifactKey: Guid(d5a8ab9e911e47d46af0358556087bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts using Guid(d5a8ab9e911e47d46af0358556087bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee6890ce3843d41d69631579ab818e1d') in 0.002282 seconds 
+  Import took 0.008778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.583509 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Animations
+  artifactKey: Guid(2b8b29afda297e6488b87e17329980fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Animations using Guid(2b8b29afda297e6488b87e17329980fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfc6a635c76e55e1c1ba7df2f6afc3d') in 0.002566 seconds 
+  Import took 0.007499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.249965 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Cameras
+  artifactKey: Guid(c4fa45d32517714468f5a94ca772c20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Cameras using Guid(c4fa45d32517714468f5a94ca772c20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4826e6c2c7bc2734c5ef90d2b521bd01') in 0.002872 seconds 
+  Import took 0.008986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.819318 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Lens Flares
+  artifactKey: Guid(577ce3afb6c9589479a35caa64227c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Lens Flares using Guid(577ce3afb6c9589479a35caa64227c35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e649dd825ddd92ae6023d0fe34b527da') in 0.003447 seconds 
+  Import took 0.008579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.390891 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Lens Flares/Blue Glow.flare
+  artifactKey: Guid(fc05ea72b64827a448e37b0c9e2d9e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Lens Flares/Blue Glow.flare using Guid(fc05ea72b64827a448e37b0c9e2d9e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7f434f87b61b754b191313e3ea668f9') in 0.003173 seconds 
+  Import took 0.008832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.728186 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials
+  artifactKey: Guid(84efad2b37936734586e4d6de00d64a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials using Guid(84efad2b37936734586e4d6de00d64a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a414a46f63f6b5d2500aadc05224694') in 0.002120 seconds 
+  Import took 0.006614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.800518 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts/PDS_GameController.cs
+  artifactKey: Guid(c1da8494c5c8b964aa2058b2057aebe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts/PDS_GameController.cs using Guid(c1da8494c5c8b964aa2058b2057aebe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86e667ccb73cd1d79ee87944b231ddf') in 0.002572 seconds 
+  Import took 0.008599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.767945 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts/ScrollingUVs_PDS.cs
+  artifactKey: Guid(fb70e113edfba6b43a97a49fd912b70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts/ScrollingUVs_PDS.cs using Guid(fb70e113edfba6b43a97a49fd912b70b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e915d5806f1a9e191b47bb52f090e757') in 0.002399 seconds 
+  Import took 0.007418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.305392 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials/Particle sheet add.mat
+  artifactKey: Guid(41a4ddea1f1bafa498c998e2c62fd528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials/Particle sheet add.mat using Guid(41a4ddea1f1bafa498c998e2c62fd528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41feefffcd26dc5e9688a0f1a3aada2f') in 0.011077 seconds 
+  Import took 0.016207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.249076 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts/HUDFPS.cs
+  artifactKey: Guid(61cd87431bad06e468cddff68c34eda6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Scripts/HUDFPS.cs using Guid(61cd87431bad06e468cddff68c34eda6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '311f7fc77a7f7a7a9c4c5e9240f0c59d') in 0.002266 seconds 
+  Import took 0.007064 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007301 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A6DFEB90 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5D36DC0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A177B020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384C6F420 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A681AD20 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6E2CAC0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A65634D0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A70482C0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E9A34CE0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384C6F420 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A681AD20 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E9A86D80 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000143847AB6F0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4860030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384C6F420 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6B4F030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2035410 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A63FFF30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6C2F140 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6F2CB40 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.334 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1335ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (1143ms)
+			LoadAssemblies (214ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (349ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (491ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (395ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3064 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.3 MB.
+System memory in use after: 205.1 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3573.
+Total: 3.213200 ms (FindLiveObjects: 0.255600 ms CreateObjectMapping: 0.173500 ms MarkObjects: 2.571400 ms  DeleteObjects: 0.211700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 20.091450 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop fallback.prefab
+  artifactKey: Guid(39051c4c6f9bd604382d68b7a910a9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop fallback.prefab using Guid(39051c4c6f9bd604382d68b7a910a9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ccf22a7505a9ecf916abb293fa663f') in 0.148670 seconds 
+  Import took 0.154686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.332846 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop mobile.prefab
+  artifactKey: Guid(578c7b5ceacee2f4ca4c7b9c1ec31b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop mobile.prefab using Guid(578c7b5ceacee2f4ca4c7b9c1ec31b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f2a2251c185dcf8283f0508b24c0121') in 0.010863 seconds 
+  Import took 0.016261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.146495 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop sharp.prefab
+  artifactKey: Guid(c9afa2a2ad89ebc41897c1247ceddadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop sharp.prefab using Guid(c9afa2a2ad89ebc41897c1247ceddadd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef74094e1dbc19070e7550342cdfef60') in 0.011984 seconds 
+  Import took 0.017521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.226538 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop soft.prefab
+  artifactKey: Guid(e5e72c487c3d9574195db877dff604fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop soft.prefab using Guid(e5e72c487c3d9574195db877dff604fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b573185da184a1a0559035f78cb1e4') in 0.012982 seconds 
+  Import took 0.018614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.105362 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 sharp.prefab
+  artifactKey: Guid(49265d0ec016fc946a15107b9a82b5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 sharp.prefab using Guid(49265d0ec016fc946a15107b9a82b5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '573ba44f4149201e783462cdb2ea41e5') in 0.013874 seconds 
+  Import took 0.019011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.990726 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 soft.prefab
+  artifactKey: Guid(b0fa6e8756f3a9e43b8ca1e482604f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion loop_2 soft.prefab using Guid(b0fa6e8756f3a9e43b8ca1e482604f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f26d52c4099da1bf57500c693557a0') in 0.013084 seconds 
+  Import took 0.018123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.817367 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single fallback.prefab
+  artifactKey: Guid(54b661f759164cb4cb9424de6a512cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single fallback.prefab using Guid(54b661f759164cb4cb9424de6a512cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72028e772dd4165b888120f66367bcca') in 0.014210 seconds 
+  Import took 0.020747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.158151 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single mobile.prefab
+  artifactKey: Guid(f66e014454bdeb942944471c5e19da6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single mobile.prefab using Guid(f66e014454bdeb942944471c5e19da6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c520fe3e2f324a5c13e1a669102438db') in 0.012041 seconds 
+  Import took 0.017056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.734313 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single sharp.prefab
+  artifactKey: Guid(7e434543af9a9694eb543bfed5b37dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single sharp.prefab using Guid(7e434543af9a9694eb543bfed5b37dcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f1d6430b435848b61ef213a306f244b') in 0.015335 seconds 
+  Import took 0.021645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.817263 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single soft.prefab
+  artifactKey: Guid(4be461bdf6702f64298fb518ce64cc1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single soft.prefab using Guid(4be461bdf6702f64298fb518ce64cc1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01db69a82116b436155d8aee21e6c529') in 0.018380 seconds 
+  Import took 0.024175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.506425 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 fallback.prefab
+  artifactKey: Guid(7070fbe5d358dfd45b3de7d9fddfd386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 fallback.prefab using Guid(7070fbe5d358dfd45b3de7d9fddfd386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac802a33605165b9fe7e2ac6707864b5') in 0.011710 seconds 
+  Import took 0.018163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.848564 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 sharp.prefab
+  artifactKey: Guid(866a4ac022f2a8e46b9f482d65401a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Prefabs/Explosion single_2 sharp.prefab using Guid(866a4ac022f2a8e46b9f482d65401a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39175f7170d935a29e392a86a7205f54') in 0.011591 seconds 
+  Import took 0.017280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 136.884037 seconds.
+  path: Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials/Glow add.mat
+  artifactKey: Guid(6574435646581f34f9f80e0c7cafdde1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Dissolve Shader by Moonflower Carnivore/Materials/Glow add.mat using Guid(6574435646581f34f9f80e0c7cafdde1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcb69b66c1f24ee9b22afab0a64abee6') in 0.028981 seconds 
+  Import took 0.038799 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009273 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A6DFEB90 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6475150 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4950020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A28E1630 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A681AD20 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A694BA30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0E69040 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A70481D0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6CF6020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A28E1630 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A681AD20 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384FB4DB0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A66AC860 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000143845C4030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A28E1630 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E925C080 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A1030570 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384D17010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6475150 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7BABF30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.506 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1507ms)
+		BeginReloadAssembly (161ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1286ms)
+			LoadAssemblies (159ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (369ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (647ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (232ms)
+				ProcessInitializeOnLoadAttributes (397ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3060 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 204.9 MB.
+System memory in use after: 204.7 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3576.
+Total: 3.680900 ms (FindLiveObjects: 0.285100 ms CreateObjectMapping: 0.172200 ms MarkObjects: 2.936400 ms  DeleteObjects: 0.286300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3464.775052 seconds.
+  path: Assets/Script/EnemyFSM2.cs
+  artifactKey: Guid(33cbd2b6c8ab73d4e9c3580029573ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/EnemyFSM2.cs using Guid(33cbd2b6c8ab73d4e9c3580029573ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f16df079893d6c95be51485e83c52af') in 0.022582 seconds 
+  Import took 0.051630 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008655 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A6DFEB90 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A59A6D60 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4950020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6C23C80 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7A3B030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A694BA30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2C64020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A70481D0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E925C080 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6C23C80 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7A3B030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A671FDE0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5DC6830 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E925C080 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6C23C80 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7C2F020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2786020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6837F40 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A59A6D60 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A28A7E20 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.164 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1164ms)
+		BeginReloadAssembly (157ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (957ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (301ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (450ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (367ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3060 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 204.9 MB.
+System memory in use after: 204.8 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3578.
+Total: 3.042400 ms (FindLiveObjects: 0.219600 ms CreateObjectMapping: 0.142900 ms MarkObjects: 2.447300 ms  DeleteObjects: 0.231700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010875 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A6DFEB90 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2C6DE50 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A127C040 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7A3B030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5946010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E94430C0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A127C040 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A70481D0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0FFB020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7A3B030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5946010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A63E8CC0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001439B169DC0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0FFB020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7A3B030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4D44400 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6459010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4D18010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2C6DE50 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7C2F020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.324 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1325ms)
+		BeginReloadAssembly (175ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1091ms)
+			LoadAssemblies (164ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (468ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (362ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3060 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.0 MB.
+System memory in use after: 204.8 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3580.
+Total: 4.299600 ms (FindLiveObjects: 0.211200 ms CreateObjectMapping: 0.131500 ms MarkObjects: 3.674200 ms  DeleteObjects: 0.281500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007050 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A6DFEB90 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A665B840 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5138030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384C7EE30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0E69040 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0EDC010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5138030 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A70481D0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0FFB020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384C7EE30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0E69040 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A5D35840 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4199510 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0FFB020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384C7EE30 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4D44400 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A1030570 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A696BA50 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A665B840 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A7C2F020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.982 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1983ms)
+		BeginReloadAssembly (294ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (70ms)
+		EndReloadAssembly (1574ms)
+			LoadAssemblies (282ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (555ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (635ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (124ms)
+				ProcessInitializeOnLoadAttributes (492ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3060 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.0 MB.
+System memory in use after: 204.8 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3582.
+Total: 10.910100 ms (FindLiveObjects: 0.397000 ms CreateObjectMapping: 0.251800 ms MarkObjects: 9.558700 ms  DeleteObjects: 0.701300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007174 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000145A6DFEB90 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145EFDD0010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A4950020 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6862200 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A63212B0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000014384D95AE0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A23BB080 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A70481D0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E9A34CE0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6862200 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A18C8DA0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A468A6B0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145E981F0A0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\VSSettingsProvider.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A0DB0070 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6862200 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A63D0B00 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A574B010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A2C52010 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6475150 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000145A6AB5DB0 doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity\Github\3T\MisionKJ\MisionKJ\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.111 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1111ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (895ms)
+			LoadAssemblies (145ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (304ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (375ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (284ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3060 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 205.0 MB.
+System memory in use after: 204.8 MB.
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 3584.
+Total: 3.330600 ms (FindLiveObjects: 0.227300 ms CreateObjectMapping: 0.149200 ms MarkObjects: 2.710300 ms  DeleteObjects: 0.242800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

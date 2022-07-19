@@ -17,8 +17,11 @@ public class C4 : MonoBehaviour
      public float m_TotalSeconds = 30;
      public TextMeshProUGUI  m_Text; 
      public GameObject textBackGround;
+    public GameObject explosion1;
+    public GameObject explosion2;
 
-    [SerializeField]
+
+   [SerializeField]
     private bool c4OnOff = false;
     [SerializeField]
     private bool c4Install = false;
@@ -41,6 +44,7 @@ public class C4 : MonoBehaviour
             //... 여기에 카운트 다운이 종료 될때 [이벤트]를 넣으면 됩니다. 
             Debug.Log("쾅쾅");
             textBackGround.SetActive(false);
+            isCountDown = false;
         } 
         m_Text.text = m_Timer; 
     }
@@ -113,7 +117,10 @@ public class C4 : MonoBehaviour
     { 
         m_Timer = @"00:00:00.000"; 
         m_TotalSeconds = 0; 
-        isCountDown = false; 
+        isCountDown = false;
+        explosion1.SetActive(true);
+        explosion2.SetActive(true);
+
     } 
 
 }
