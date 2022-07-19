@@ -21,7 +21,7 @@ public class EnemyFSM2 : MonoBehaviour
     [SerializeField]
     private Transform projectileSpawnPoint; // 발사체 생성 위치
     [SerializeField]
-    private float attackRange = 10; // 공격 범위 (이 범위 안에 들어오면"Attack" 살태로 변경)
+    private float attackRange = 100; // 공격 범위 (이 범위 안에 들어오면"Attack" 살태로 변경)
     [SerializeField]
     private float attackRate = 1; // 공격 속도
 
@@ -81,7 +81,6 @@ public class EnemyFSM2 : MonoBehaviour
     }
     public void ChangeState(EnemyState2 newState)
     {
-        Debug.Log(newState);
         
         if (isDie == false)
         {
@@ -273,6 +272,7 @@ public class EnemyFSM2 : MonoBehaviour
             if (distance <= attackRange)
             {
              RaycastHit hit;
+             Debug.Log("공격사거리");
              
              Vector3 targetPoint = Vector3.zero;
              if(Physics.Raycast(this.transform.position,this.transform.forward, out hit,attackRange))
@@ -280,19 +280,26 @@ public class EnemyFSM2 : MonoBehaviour
                  targetPoint = hit.point;
                  
              }
-              Vector3 attackDirection = (targetPoint - this.transform.position).normalized;
-              if(Physics.Raycast(this.transform.position,attackDirection,out hit,attackRange))
+              Vector3 attackDirection = (targetPoint - transform.position).normalized;
+            // Vector3 attackDirection = (navMeshAgent.destination - bulletSpawnPoit.position).normalized;
+            
+              if(Physics.Raycast(bulletSpawnPoit.position,attackDirection,out hit,attackRange))
               {
-                if(hit.transform.CompareTag("ImpactEnemy"))
+                if(hit.transform.CompareTag("ImpactNormal"))
                 {
                     return;
                 }
                 else if(hit.transform.CompareTag("Player"))
                 {
+                    Debug.Log("공격가능");
                     ChangeState(EnemyState2.Attack);
                 }
              }
-             Debug.DrawRay(this.transform.position,attackDirection*attackRange,Color.blue);
+            //  Debug.DrawRay(transform.position,attackDirection*attackRange,Color.blue);
+            // Debug.DrawRay(bulletSpawnPoit.position,(navMeshAgent.destination - bulletSpawnPoit.position)*attackRange,Color.blue);
+            Debug.DrawRay(bulletSpawnPoit.position,attackDirection*attackRange,Color.blue);
+             //Debug.DrawRay(bulletSpawnPoit.position,(navMeshAgent.destination - bulletSpawnPoit.position)*attackRange,Color.red);
+            //  Debug.Log("길이 : "+(navMeshAgent.destination - bulletSpawnPoit.position)*attackRange);
             }
             // if (distance <= attackRange)
             // {
@@ -302,7 +309,6 @@ public class EnemyFSM2 : MonoBehaviour
             else if (distance <= targetRecognitionRange)
             {
                 ChangeState(EnemyState2.Pursuit);
-                Debug.Log("아?");
             }
             else if (distance >= pursuitLimitRange&&isChange)
             {
@@ -315,9 +321,9 @@ public class EnemyFSM2 : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // "배회" 상태일 때 이동할 경로 표시
-        Gizmos.color = Color.black;
-        Gizmos.DrawRay(transform.position, navMeshAgent.destination - transform.position);
+        // // "배회" 상태일 때 이동할 경로 표시
+        // Gizmos.color = Color.black;
+        // Gizmos.DrawRay(transform.position, navMeshAgent.destination - transform.position);
 
         // 목표 인식 범위
         Gizmos.color = Color.red;

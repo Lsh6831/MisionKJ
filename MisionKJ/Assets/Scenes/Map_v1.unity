@@ -16979,6 +16979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swat (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7099228294716028885, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00006494621
@@ -21008,6 +21012,10 @@ PrefabInstance:
     - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_Name
       value: Swat (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7099228294716028885, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25185,7 +25193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6123225140185751052, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 91
+      value: 86.26
       objectReference: {fileID: 0}
     - target: {fileID: 6123225140185751052, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25193,7 +25201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6123225140185751052, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.1
+      value: -8.87
       objectReference: {fileID: 0}
     - target: {fileID: 6123225140185751052, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53171,6 +53179,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1243774381867523279}
+    - target: {fileID: 6012492075789010444, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
+      propertyPath: attackRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6123225140185751052, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -53218,10 +53230,6 @@ PrefabInstance:
     - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_Name
       value: Swat (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
@@ -59252,6 +59260,10 @@ PrefabInstance:
     - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_Name
       value: Swat (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7099228294716028885, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -77903,6 +77915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swat (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7099228294716028885, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00006494621
@@ -78862,15 +78878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2791567374107632008, guid: e65ba375c212af045a1dd808ada719bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.132
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 2791567374107632008, guid: e65ba375c212af045a1dd808ada719bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.519
+      value: 5.36
       objectReference: {fileID: 0}
     - target: {fileID: 2791567374107632008, guid: e65ba375c212af045a1dd808ada719bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -59.945
+      value: -54.8
       objectReference: {fileID: 0}
     - target: {fileID: 2791567374107632008, guid: e65ba375c212af045a1dd808ada719bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -78937,6 +78953,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1243774381867523279}
+    - target: {fileID: 6012492075789010444, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
+      propertyPath: attackRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6123225140185751052, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -78984,10 +79004,6 @@ PrefabInstance:
     - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
       propertyPath: m_Name
       value: Swat
-      objectReference: {fileID: 0}
-    - target: {fileID: 6895504152855774390, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb7098062a1ec34693f5f01d3481b47, type: 3}
