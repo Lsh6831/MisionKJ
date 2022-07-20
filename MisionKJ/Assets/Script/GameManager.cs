@@ -39,11 +39,17 @@ public class GameManager : MonoBehaviour
     public float life = 3;
     private bool isGameOver = false;
 
+    public GameObject camera1;
+    public GameObject camera2;
+    public GameObject gameEnding;
+    public GameObject map;
+
 
     private void Update()
     {
         ESCKeyDown();
         Respon();
+        Map();
     }
     private void ESCKeyDown()
     {
@@ -54,6 +60,7 @@ public class GameManager : MonoBehaviour
                 if (!gamesituation)
                 {
                     menu.SetActive(false);
+                    map.SetActive(false);
                     if (!isDie)
                     {
                         gamesituation = true;
@@ -69,11 +76,21 @@ public class GameManager : MonoBehaviour
             menu.SetActive(true);
             GameStop();
             gamesituation = false;
+            clickCount=0;
 
         }
         else if (clickCount > 2)
         {
             clickCount = 0;
+        }
+    }
+    private void Map()
+    {
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+        map.SetActive(true);
+        GameStop();
+        gamesituation = false;
         }
     }
     private void Respon()
@@ -102,6 +119,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameStart()
     {
+        Debug.Log("restart");
         Time.timeScale = 1f;
         gamesituation = true;
     }
@@ -149,6 +167,21 @@ public class GameManager : MonoBehaviour
         // assultRifle.SetActive(true);
 
         GameObject.Find("Player").GetComponent<WeaponSwitchSystem>().SwitchingWeapon(WeaponType.Main);
+
+    }
+
+    public IEnumerator GameEnd()
+    {
+         yield return new WaitForSeconds(25f);
+        camera1.SetActive(false);
+        camera2.SetActive(true);
+        
+         yield return new WaitForSeconds(35f);
+         gameEnding.SetActive(true);
+         menu.SetActive(true);
+            GameStop();
+            gamesituation = false;
+
 
     }
 

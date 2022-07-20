@@ -19,6 +19,7 @@ public class C4 : MonoBehaviour
      public GameObject textBackGround;
     public GameObject explosion1;
     public GameObject explosion2;
+    public GameObject explosion3;
 
 
    [SerializeField]
@@ -49,7 +50,7 @@ public class C4 : MonoBehaviour
         m_Text.text = m_Timer; 
     }
 
-    private void OnclickC4Button()
+    public void OnclickC4Button()
     {
         c4OnOff = true;
     }
@@ -101,6 +102,8 @@ public class C4 : MonoBehaviour
         sr.material.color = Color.white;
         isCountDown=true;
         textBackGround.SetActive(true);
+        EndTime();
+
     }
      private string CountdownTimer(bool IsUpdate = true) 
     { 
@@ -120,7 +123,12 @@ public class C4 : MonoBehaviour
         isCountDown = false;
         explosion1.SetActive(true);
         explosion2.SetActive(true);
-
+        explosion3.SetActive(true);
     } 
+    private void EndTime()
+    {
+         GameManager.instance.StartCoroutine("GameEnd");
+
+    }
 
 }
